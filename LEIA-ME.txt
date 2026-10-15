@@ -1,0 +1,105 @@
+MANU SABOARIA — SITE PRONTO PARA PUBLICAR
+Preparado em 15/10/2026
+
+Esta pasta contém o site completo: 26 itens de catálogo, 32 imagens de destaque,
+galeria com TODAS as 137 imagens do arquivo, sacola e pedidos pelo WhatsApp.
+Tamanho aproximado: 30.5 MB. Três itens têm valor sob consulta.
+
+1. ABRIR NO COMPUTADOR
+
+Abra esta pasta e dê dois cliques em index.html. O site abre no navegador e
+funciona sem instalar programas, usar terminal ou executar um comando de build.
+Mantenha index.html e a pasta assets juntos, na estrutura original.
+
+No celular e no computador, o cliente pode escolher produtos, ajustar as
+quantidades e montar a sacola. O botão de pedido abre o WhatsApp com o resumo.
+É necessário enviar a mensagem e combinar os detalhes com a Manu para confirmar
+o pedido. O site não processa pagamentos nem reserva estoque automaticamente.
+
+Contato configurado: Manu Saboaria, +55 (41) 99986-3000.
+Número usado nos links: 5541999863000, conferido também nos rótulos das fotos.
+
+2. PUBLICAR PELO GITHUB + NETLIFY
+
+a) Crie um repositório no GitHub para este site.
+b) Envie o CONTEÚDO desta pasta para a raiz do repositório. Abra a pasta
+   manu-saboaria, selecione os arquivos e a pasta assets e faça o upload.
+   O arquivo index.html deve aparecer logo na raiz do repositório, junto de
+   assets e netlify.toml. Não deixe tudo dentro de outra pasta manu-saboaria.
+   Inclua também os demais arquivos entregues, como 404.html e robots.txt.
+c) No Netlify, entre na sua conta e abra Projects. Em Add new project,
+   escolha Import an existing project e selecione GitHub.
+d) Autorize a conexão com o repositório desejado e selecione esse repositório.
+e) Confira as configurações deste projeto:
+      Base directory: deixe vazio.
+      Build command: deixe vazio.
+      Publish directory: .
+   O ponto significa a raiz do repositório. O netlify.toml já define esse
+   diretório. Este site não precisa de npm, dependências ou etapa de build.
+f) Confirme a publicação no botão final exibido pelo Netlify (Publish ou
+   Deploy site). Aguarde o deploy concluir e abra o endereço netlify.app.
+
+Depois da conexão com o GitHub, novos commits na branch publicada atualizam o
+site pelo Netlify. Para alterar nome do projeto ou usar um domínio próprio,
+utilize as configurações do projeto no painel do Netlify.
+
+3. ALTERNATIVA: PUBLICAR A PASTA DIRETAMENTE
+
+Entre no Netlify. Em Projects > Add new project > Deploy manually, arraste a
+pasta manu-saboaria inteira, a que contém index.html, para a área de envio.
+Também é possível acessar https://app.netlify.com/drop.
+
+Esta pasta já contém os arquivos finais. Para atualizar um site publicado
+manualmente, faça as alterações locais e envie novamente a pasta atualizada
+pela área de envio da página Deploys do projeto.
+
+4. ATUALIZAR PRODUTOS, PREÇOS E WHATSAPP
+
+O catálogo está em assets/js/products.js. Abra esse arquivo em um editor de
+texto ou código. Cada produto tem nome, preço, imagem, descrição e tamanho.
+
+Exemplos de preço no arquivo:
+   price:15      corresponde a R$ 15,00
+   price:59.90   corresponde a R$ 59,90
+   price:null    exibe o produto como valor sob consulta
+
+Use ponto para os centavos, sem o símbolo R$ e sem vírgula. Preserve as aspas,
+vírgulas e chaves da estrutura. Salve, recarregue o site e confira o resultado.
+O campo phone no início do mesmo arquivo define o WhatsApp da sacola. Os links de contato fixos em index.html, galeria.html, app.js e gallery.js também devem ser atualizados se o número mudar.
+Use o número completo, somente dígitos: país + DDD + número.
+
+5. IMAGENS E APARÊNCIA
+
+As fotos de destaque ficam em assets/images. A galeria completa está em galeria.html e reúne as 137 imagens convertidas do arquivo enviado. Todas ficam em assets/galeria, em WebP, sem depender do Google Fotos. A lista e os títulos da galeria estão em assets/js/gallery-data.js; o comportamento está em assets/js/gallery.js. Os 115 vídeos do arquivo original não foram incorporados, pois a galeria reúne as imagens. Para substituir uma imagem, mantenha o mesmo
+nome e formato ou atualize o campo image do produto correspondente em
+assets/js/products.js. Use fotos otimizadas para carregar rapidamente.
+
+As cores, fontes, espaçamentos e regras de adaptação ao celular ficam em
+assets/css/styles.css. Os textos das seções estão em index.html. O arquivo
+assets/js/app.js controla filtros, busca, detalhes, sacola e WhatsApp.
+
+6. ORIGEM DOS VALORES E CONFERÊNCIA ANTES DE PUBLICAR
+
+Os preços foram transcritos dos textos do álbum compartilhado da Manu Saboaria,
+consultado em 15/10/2026:
+https://photos.google.com/share/AF1QipODkdcVihkDzrzG7Sak-wSrPawpe5HSgx7-LkT7QnZZrhd_X-5FS2MaYgJdA1LXWQ?pli=1&key=WUlIZm56YjgzbUwxektvY2tRUTZmZGE5NlA2VkVB
+
+As imagens foram preparadas a partir do arquivo fornecido. Sabonete líquido,
+creme de mãos e presente personalizado estão sob consulta. Mantenha preços e
+disponibilidade atualizados e confirme fragrâncias, estoque, entrega e pagamento
+com o cliente pelo WhatsApp.
+
+Após publicar, confira no celular: carregamento das fotos, busca, filtros,
+detalhes dos produtos, quantidades na sacola e o número aberto no WhatsApp.
+Verifique que o resumo contém os produtos e valores esperados antes de enviar.
+
+7. DOCUMENTAÇÃO OFICIAL
+
+Sequência de publicação conferida na documentação oficial em 15/10/2026:
+https://docs.netlify.com/manage/projects/add-new-project/
+https://docs.netlify.com/start/quickstarts/deploy-from-repository/
+https://docs.netlify.com/start/quickstarts/netlify-drop-quickstart/
+https://docs.netlify.com/build/configure-builds/overview/
+
+Os nomes de alguns botões podem variar conforme o idioma do painel.
+
