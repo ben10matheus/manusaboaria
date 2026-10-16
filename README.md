@@ -1,6 +1,6 @@
 # Manu Saboaria
 
-Site da marca Manu Saboaria com catálogo, sacola, pedidos pelo WhatsApp, galeria completa e página de eventos especiais.
+Site da marca Manu Saboaria com catálogo, sacola, pedidos pelo WhatsApp, galeria completa e coleções especiais, locais e canais de contato.
 
 Este pacote contém o site inteiro, incluindo fotos, logo e fontes locais. Não depende do Google Fotos para exibir as imagens.
 
@@ -40,11 +40,13 @@ Abra `index.html` no navegador para visualizar. Mantenha todos os arquivos e a p
 | Fotos de destaque | `assets/images/` |
 | Galeria completa | `assets/galeria/` |
 | Lista da galeria | `assets/js/gallery-data.js` |
-| Fotos de eventos | `assets/eventos-especiais/` |
-| Legendas dos eventos | `assets/eventos-especiais/config.js` |
+| Fotos da edição de primavera | `assets/eventos-especiais/primavera-2026/` |
+| Títulos e legendas das coleções | `assets/eventos-especiais/config.js` |
 | Cores e acabamento | `assets/css/marca.css` e `assets/css/acolhimento.css` |
 
-Nos eventos, substitua as imagens mantendo os nomes `capa.jpg`, `especial1.jpg`, `especial2.jpg`, `especial3.jpg` e `especial4.jpg`. A capa é a imagem principal. Há instruções adicionais em `assets/eventos-especiais/COMO-ATUALIZAR.txt`.
+Em **Coleções especiais**, a edição **Tempo de Flores — Primavera** tem nove fotos: `capa.jpg` e `especial1.jpg` até `especial8.jpg`, em `assets/eventos-especiais/primavera-2026/`. O campo `basePath` em `assets/eventos-especiais/config.js` aponta para a edição ativa. As fotos anteriores foram preservadas. Veja `assets/eventos-especiais/COMO-ATUALIZAR.txt`.
+
+A página `fale-conosco.html` reúne WhatsApp, Instagram e as seis dúvidas frequentes abaixo dos canais.
 
 Os pedidos são montados na sacola e enviados ao WhatsApp do Manu. A confirmação e os detalhes do pedido são combinados pelo atendimento.
 

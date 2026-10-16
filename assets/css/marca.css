@@ -112,7 +112,7 @@ h1 em,h2 em{color:#000!important}
 .gallery-modal-footer .eyebrow{font-size:10px}
 .gallery-modal-actions .button,.gallery-modal-actions .text-link{font-size:12px}
 
-/* Eventos especiais: cinco arquivos de imagem em uma única pasta. */
+/* Coleções especiais: fotos em uma pasta própria para cada edição. */
 .event-hero{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:9%;padding-block:60px 84px}
 .event-hero-copy h1{font-size:clamp(54px,5.6vw,78px);line-height:1.08;letter-spacing:-2.3px;margin-top:22px}
 .event-hero-copy>p:not(.eyebrow){font-size:15px;color:var(--muted);line-height:1.85;margin-top:28px;max-width:395px}

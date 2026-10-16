@@ -1,11 +1,14 @@
-/* Manu Saboaria — imagens de referência e navegação de eventos especiais. */
+/* Manu Saboaria — imagens de referência e navegação de coleções especiais. */
 (() => {
   'use strict';
 
   function init() {
     const config = window.MANU_EVENTOS || {};
     const images = Array.isArray(config.images) ? config.images : [];
-    const basePath = 'assets/eventos-especiais/';
+    const configuredPath = typeof config.basePath === 'string' ? config.basePath.trim() : '';
+    const basePath = /^assets\/eventos-especiais(?:\/[A-Za-z0-9_-]+)*\/?$/.test(configuredPath)
+      ? configuredPath.replace(/\/?$/, '/')
+      : 'assets/eventos-especiais/';
     const phone = String(config.phone || '5541999863000').replace(/\D/g, '');
     const $ = id => document.getElementById(id);
     const dialog = $('event-dialog');
@@ -122,13 +125,14 @@
       if (typeof config.subtitle === 'string') element.textContent = config.subtitle;
     });
 
-    const contact = $('event-contact');
-    if (contact) {
-      const message = 'Olá, Manu! Gostaria de conversar sobre presentes e lembrancinhas para um evento especial. Pode me ajudar com opções, quantidades, valores e prazos?';
+    const message = typeof config.contactMessage === 'string' && config.contactMessage.trim()
+      ? config.contactMessage.trim()
+      : 'Olá, Manu! Gostaria de conversar sobre presentes e lembrancinhas para um evento especial. Pode me ajudar com opções, quantidades, valores e prazos?';
+    document.querySelectorAll('#event-contact, [data-event-contact]').forEach(contact => {
       contact.href = 'https://wa.me/' + phone + '?text=' + encodeURIComponent(message);
       contact.target = '_blank';
       contact.rel = 'noopener noreferrer';
-    }
+    });
 
     if (dialog) {
       dialog.setAttribute('aria-labelledby', 'event-modal-title');

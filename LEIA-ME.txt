@@ -16,6 +16,14 @@ Não é necessário instalar nada para o site funcionar.
 Esta é a cópia para publicação. A pasta principal de manutenção continua
 sendo Manu Saboaria\site na Área de Trabalho.
 
+COLEÇÕES ESPECIAIS E CONTATO
+
+Tempo de Flores — Edição de Primavera: nove fotos na pasta
+assets/eventos-especiais/primavera-2026, com capa.jpg e especial1.jpg
+até especial8.jpg. Legendas e pasta ativa em assets/eventos-especiais/config.js.
+As instruções ficam em assets/eventos-especiais/COMO-ATUALIZAR.txt.
+Fale conosco reúne WhatsApp, Instagram e dúvidas em fale-conosco.html.
+
 COMO NOS ENCONTRAR — AGENDA
 
 A página como-nos-encontrar.html reúne os quatro locais fixos, as feiras

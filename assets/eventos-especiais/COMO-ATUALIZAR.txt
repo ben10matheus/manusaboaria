@@ -1,38 +1,30 @@
-EVENTOS ESPECIAIS — MANUTENÇÃO DAS CINCO IMAGENS
+COLEÇÕES ESPECIAIS — EDIÇÃO DE PRIMAVERA
 
-Todas as fotos desta aba estão nesta pasta:
-assets/eventos-especiais/
+A edição atual é Tempo de Flores / Primavera Curitibana.
+As nove fotos ficam em assets/eventos-especiais/primavera-2026/.
 
-capa.jpg       Imagem principal, no início da página.
-especial1.jpg  Primeira imagem da seção de inspirações.
-especial2.jpg  Segunda imagem.
-especial3.jpg  Terceira imagem.
-especial4.jpg  Quarta imagem.
+capa.jpg: composição principal da coleção.
+especial1.jpg a especial8.jpg: oito fotos exibidas na galeria.
 
-PARA TROCAR UMA IMAGEM
+PARA TROCAR UMA FOTO
 
-1. Salve a nova foto em JPG/JPEG de verdade.
-2. Substitua o arquivo desejado mantendo o nome completo acima, com .jpg.
-   Exemplo: uma nova foto de capa deve se chamar capa.jpg.
-3. Abra config.js, nesta mesma pasta, e ajuste title (legenda) e alt
-   (descrição acessível) para corresponder à nova imagem.
-4. Abra eventos-especiais.html para conferir.
-5. Envie os arquivos alterados para os mesmos caminhos no GitHub.
-   Depois do deploy, recarregue a página. Se necessário, use Ctrl+F5.
+1. Substitua a foto nessa subpasta mantendo o nome e o formato JPG.
+2. Em assets/eventos-especiais/config.js, ajuste title e alt da foto.
+3. Confira eventos-especiais.html e a ampliação da imagem.
+4. Envie os arquivos alterados para os mesmos caminhos no GitHub.
 
-As imagens atuais são referências de produtos e presentes do acervo do Manu.
-Elas podem ser substituídas pelas fotos do evento ou coleção que você desejar.
-Os arquivos das outras páginas e da galeria ficam em pastas separadas.
+PARA UMA NOVA EDIÇÃO
 
-RECOMENDAÇÕES PARA AS FOTOS
+Crie uma nova subpasta em assets/eventos-especiais/ e ajuste basePath
+no config.js. Cada item de images tem file (nome do arquivo), title
+(legenda) e alt (descrição acessível). A capa é o primeiro item.
+Atualize também os textos e os caminhos de fallback/preload do HTML,
+para que a página já apresente a nova edição antes do JavaScript carregar.
 
-Prefira fotos com boa luz e cores naturais. Fotos verticais funcionam bem
-no layout; na ampliação, a imagem inteira aparece sem corte. Use imagens
-com pelo menos 1200 pixels no lado maior e evite colocar textos pequenos
-dentro da foto. O título e a descrição podem ficar no config.js.
+O campo contactMessage define a mensagem do WhatsApp desta coleção.
+O nome público da aba é Coleções especiais. O endereço continua sendo
+eventos-especiais.html, preservando os links que já estavam no site.
 
-As legendas ficam em assets/eventos-especiais/config.js.
-Os textos de apresentação ficam em eventos-especiais.html.
-As regras visuais ficam em assets/css/marca.css.
-O WhatsApp dos contatos de eventos também pode ser ajustado no config.js;
-se mudar o número da marca, atualize os links fixos das demais páginas.
+As cinco fotos anteriores continuam preservadas na pasta principal
+assets/eventos-especiais/, sem serem usadas nesta edição.
+As fotos originais enviadas pelo WhatsApp não foram modificadas.
