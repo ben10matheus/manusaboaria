@@ -24,6 +24,12 @@ até especial8.jpg. Legendas e pasta ativa em assets/eventos-especiais/config.js
 As instruções ficam em assets/eventos-especiais/COMO-ATUALIZAR.txt.
 Fale conosco reúne WhatsApp, Instagram e dúvidas em fale-conosco.html.
 
+ABERTURA INSPIRADA NO CANVA
+
+A abertura tem texto e botão funcionais em HTML/CSS e a foto real do Manu.
+O estilo fica em assets/css/canva.css; a foto original fica em
+assets/images/manu-na-feira.png, também usada em O Manu e Onde encontrar.
+
 COMO NOS ENCONTRAR — AGENDA
 
 A página como-nos-encontrar.html reúne os quatro locais fixos, as feiras

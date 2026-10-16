@@ -50,6 +50,10 @@ A página `fale-conosco.html` reúne WhatsApp, Instagram e as seis dúvidas freq
 
 Os pedidos são montados na sacola e enviados ao WhatsApp do Manu. A confirmação e os detalhes do pedido são combinados pelo atendimento.
 
+## Abertura inspirada no Canva
+
+A abertura foi recriada com texto e botão funcionais em HTML, fundo creme e formas suaves. O acabamento fica em `assets/css/canva.css`. A fotografia original do Manu, em `assets/images/manu-na-feira.png`, também aparece em **O Manu** e **Onde encontrar**. Os arquivos de fotos anteriores foram preservados.
+
 ## Como nos encontrar e agenda de feiras
 
 A página `como-nos-encontrar.html` mostra os locais fixos e as feiras temporárias, com links para o Google Maps. A agenda considera o dia em Curitiba: feiras futuras aparecem como próximas, as atuais ficam em andamento e as encerradas ficam no histórico recolhido.
