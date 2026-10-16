@@ -66,7 +66,7 @@
       const image = selection[selectedIndex];
       if (fullImage) {
         fullImage.src = image.src;
-        fullImage.alt = image.title + ' — foto ' + photoNumber(image) + ' da Manu Saboaria';
+        fullImage.alt = image.title + ' — foto ' + photoNumber(image) + ' da marca Manu Saboaria';
         fullImage.width = image.width;
         fullImage.height = image.height;
         fullImage.loading = 'eager';
@@ -82,7 +82,7 @@
         contact.href = contactURL(image);
         contact.target = '_blank';
         contact.rel = 'noopener noreferrer';
-        contact.setAttribute('aria-label', 'Perguntar à Manu sobre ' + image.title + ', foto ' + photoNumber(image));
+        contact.setAttribute('aria-label', 'Perguntar ao Manu sobre ' + image.title + ', foto ' + photoNumber(image));
       }
       if (original) {
         original.href = image.src;

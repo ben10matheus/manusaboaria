@@ -136,3 +136,6 @@
 .welcome-photo-main figcaption{text-align:right;padding-right:10px}
 @media(min-width:1600px){.welcome-copy h1{font-size:74px}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{animation:none!important;transition:none!important}}
+
+/* Navegação com a página Como nos encontrar. */
+@media(max-width:1180px){.cozy-header .desktop-nav{display:none}.cozy-header .menu-toggle{display:flex}}

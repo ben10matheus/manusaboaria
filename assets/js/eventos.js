@@ -18,11 +18,11 @@
     let previousOverflow = null;
 
     function titleFor(image) {
-      return String(image.title || 'Produtos e presentes da Manu');
+      return String(image.title || 'Produtos e presentes do Manu');
     }
 
     function altFor(image) {
-      return String(image.alt || 'Referência de produtos e presentes da Manu Saboaria.');
+      return String(image.alt || 'Referência de produtos e presentes da marca Manu Saboaria.');
     }
 
     function validIndex(value) {

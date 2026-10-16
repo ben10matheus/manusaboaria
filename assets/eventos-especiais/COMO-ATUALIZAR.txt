@@ -20,7 +20,7 @@ PARA TROCAR UMA IMAGEM
 5. Envie os arquivos alterados para os mesmos caminhos no GitHub.
    Depois do deploy, recarregue a página. Se necessário, use Ctrl+F5.
 
-As imagens atuais são referências de produtos e presentes do acervo da Manu.
+As imagens atuais são referências de produtos e presentes do acervo do Manu.
 Elas podem ser substituídas pelas fotos do evento ou coleção que você desejar.
 Os arquivos das outras páginas e da galeria ficam em pastas separadas.
 

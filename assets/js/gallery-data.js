@@ -699,7 +699,7 @@ window.MANU_GALLERY = [
   {
     "id": 83,
     "category": "marca",
-    "title": "Canetas da Manu",
+    "title": "Canetas do Manu",
     "src": "assets/galeria/photo-083.webp",
     "width": 3024,
     "height": 4032

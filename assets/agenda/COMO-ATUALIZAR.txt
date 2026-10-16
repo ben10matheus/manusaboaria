@@ -1,0 +1,73 @@
+MANU SABOARIA — LOCAIS E FEIRAS
+
+ATUALIZAR SEM MEXER EM CÓDIGO
+
+1. Na pasta principal Manu Saboaria, abra ATUALIZAR-FEIRAS.html no navegador.
+   Esse editor é local e fica FORA da pasta site. Não o envie ao GitHub.
+2. Para carregar o arquivo que você vai alterar, clique em Abrir agenda.js
+   e escolha site/assets/agenda/agenda.js.
+3. Adicione uma feira ou altere nome, local, datas e horários nos campos.
+4. Clique em Salvar agenda.js. Se o navegador baixar um arquivo,
+   substitua o agenda.js da pasta site/assets/agenda pelo arquivo baixado.
+5. Recarregue como-nos-encontrar.html para conferir o resultado.
+
+PUBLICAR A ALTERAÇÃO
+
+No GitHub, abra assets/agenda e envie o novo agenda.js para substituir
+o arquivo existente. Conclua o envio em Commit changes.
+Atualize também esse arquivo nas cópias SITE-COMPLETO e LOTE-1 se for
+usar novamente a pasta Manu Saboaria - GitHub.
+O editor salva um arquivo local; ele não publica mudanças sozinho.
+No site publicado não existe painel de edição nem rota para alterar a agenda.
+A publicação de arquivos exige acesso à conta do GitHub do responsável.
+
+DATAS E VISIBILIDADE
+
+Cada feira tem data de início e de fim, incluindo o último dia.
+Antes do início ela aparece como próxima; durante o período, em andamento;
+depois do fim, fica apenas no histórico recolhido da página.
+A referência é o dia em Curitiba (America/Sao_Paulo).
+Desmarcar Publicar retira a feira de todas as listas públicas.
+O site não consulta editais automaticamente. Cadastre os novos eventos
+quando a participação e a programação estiverem confirmadas.
+
+LOCAIS FIXOS
+
+Os quatro locais ficam em fixos no mesmo arquivo agenda.js. O editor mantém
+esses dados ao salvar. Para mudar os locais fixos, edite esse bloco ou
+peça a atualização do site. Não precisa alterar os outros arquivos.
+Os links do Maps são gerados a partir do endereço/consulta informado.
+
+FONTES CONFERIDAS EM 16/10/2026
+
+Largo: atendimento do Manu aos domingos, das 8h às 14h30, conforme
+a programação enviada pela marca. O cadastro municipal é referência do local:
+https://curitibacriativa.curitiba.pr.gov.br/local-exposicao/detalhes/3
+
+Carmo: quartas, 9h às 16h. Endereço validado: Av. Marechal Floriano Peixoto,
+8430, Praça Nossa Senhora do Carmo, junto à Rua da Cidadania do Boqueirão.
+https://regionais.curitiba.pr.gov.br/conteudo/boqueirao/1171
+Cadastro da feira:
+https://curitibacriativa.curitiba.pr.gov.br/local-exposicao/detalhes/7
+https://www.curitiba.pr.gov.br/noticias/quarta-tem-feirinha-de-artesanato-em-quatro-bairros-de-curitiba/83875
+
+Mercado: endereço e horários gerais do estabelecimento:
+https://www.mercadomunicipaldecuritiba.com.br/fale-conosco/
+
+Primavera e Criança na Praça Osório: 02 a 18/10/2026, segunda a sábado
+das 10h às 21h, domingos das 14h às 20h. Datas atualizadas pela Prefeitura:
+https://www.curitiba.pr.gov.br/noticias/feiras-especiais-da-primavera-e-da-crianca-comecam-nesta-sexta/85216
+https://turismo.curitiba.pr.gov.br/evento/feiras-especiais-da-primavera-e-da-crianca/4355
+O edital inicial tinha previsão anterior; as notícias posteriores confirmam
+a programação usada no site. A participação na Osório foi informada pela marca.
+
+
+Botânico: atendimento do Manu aos sábados, das 9h às 17h, informado pela
+marca. Rua São Januário, 1000, em frente ao portão principal do Jardim Botânico.
+O cadastro municipal confirma o endereço, com horário geral próprio da feira:
+https://curitibacriativa.curitiba.pr.gov.br/local-exposicao/detalhes/11
+
+Empório: produtos disponíveis dentro do Mercado Municipal, conforme informado
+pela marca. Os horários exibidos são os do Mercado, não uma promessa de
+atendimento presencial do Manu em todos os turnos. Alterações por clima
+são divulgadas nos stories @manu_saboaria.

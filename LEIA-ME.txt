@@ -15,3 +15,17 @@ Não é necessário instalar nada para o site funcionar.
 
 Esta é a cópia para publicação. A pasta principal de manutenção continua
 sendo Manu Saboaria\site na Área de Trabalho.
+
+COMO NOS ENCONTRAR — AGENDA
+
+A página como-nos-encontrar.html reúne os quatro locais fixos, as feiras
+temporárias e os botões que abrem cada endereço no Google Maps.
+
+Para atualizar as feiras sem editar código, abra ATUALIZAR-FEIRAS.html
+na pasta principal Manu Saboaria, FORA da pasta site. O editor não faz
+parte dos arquivos publicados e não deve ser enviado ao GitHub.
+Carregue assets/agenda/agenda.js, altere os campos e salve esse arquivo.
+No GitHub, substitua somente assets/agenda/agenda.js para mudar a agenda.
+O editor não publica sozinho. Feiras encerradas saem automaticamente
+da lista atual e ficam no histórico recolhido, pelo dia em Curitiba.
+As instruções e as fontes estão em assets/agenda/COMO-ATUALIZAR.txt.

@@ -1,6 +1,6 @@
 # Manu Saboaria
 
-Site da Manu Saboaria com catálogo, sacola, pedidos pelo WhatsApp, galeria completa e página de eventos especiais.
+Site da marca Manu Saboaria com catálogo, sacola, pedidos pelo WhatsApp, galeria completa e página de eventos especiais.
 
 Este pacote contém o site inteiro, incluindo fotos, logo e fontes locais. Não depende do Google Fotos para exibir as imagens.
 
@@ -10,15 +10,11 @@ Envie o **conteúdo desta pasta** para a raiz do repositório. O `index.html`, a
 
 O GitHub limita o envio pelo navegador a **100 arquivos por vez**. Como o site tem mais de 200 arquivos, use Git ou GitHub Desktop para enviar tudo junto, ou faça os envios em lotes conforme abaixo.
 
-### Pelo navegador, em lotes
+### Pelo navegador, em três lotes
 
-1. Envie os arquivos soltos da raiz desta pasta ao repositório e conclua o envio.
-2. No GitHub, crie um arquivo com o nome `assets/.gitkeep` para criar a pasta `assets` e salve.
-3. Abra `assets` no GitHub. Envie para ela o arquivo `favicon.svg` e as subpastas locais `css`, `fonts`, `images`, `js`, `marca` e `eventos-especiais`, juntos. Eles somam menos de 100 arquivos. Preserve os nomes e a estrutura dessas pastas.
-4. No GitHub, crie `assets/galeria/.gitkeep` a partir da raiz do repositório para criar a pasta da galeria e salve.
-5. Abra `assets/galeria` no GitHub. Envie os arquivos locais `photo-001.webp` até `photo-080.webp`, conclua o envio e depois envie `photo-081.webp` até `photo-137.webp`.
+Na pasta de entrega **Manu Saboaria - GitHub**, abra `LOTE-1` e arraste o **conteúdo** dela para o upload na raiz do repositório. Conclua o commit e repita com `LOTE-2` e `LOTE-3`, sempre na raiz. As pastas de lote organizam apenas o envio; seus nomes não devem aparecer dentro do repositório.
 
-Ao terminar, confira se `assets/galeria` contém as 137 imagens. Os arquivos `.gitkeep` podem permanecer.
+Depois dos três envios, o `index.html` fica na raiz e as 137 fotos da galeria ficam em `assets/galeria`. A pasta `SITE-COMPLETO` preserva a versão inteira para prévia local ou publicação manual no Netlify.
 
 Documentação oficial: [enviar arquivos ao GitHub](https://docs.github.com/en/repositories/working-with-files/managing-files/adding-a-file-to-a-repository).
 
@@ -50,4 +46,12 @@ Abra `index.html` no navegador para visualizar. Mantenha todos os arquivos e a p
 
 Nos eventos, substitua as imagens mantendo os nomes `capa.jpg`, `especial1.jpg`, `especial2.jpg`, `especial3.jpg` e `especial4.jpg`. A capa é a imagem principal. Há instruções adicionais em `assets/eventos-especiais/COMO-ATUALIZAR.txt`.
 
-Os pedidos são montados na sacola e enviados ao WhatsApp da Manu. A confirmação e os detalhes do pedido são combinados pelo atendimento.
+Os pedidos são montados na sacola e enviados ao WhatsApp do Manu. A confirmação e os detalhes do pedido são combinados pelo atendimento.
+
+## Como nos encontrar e agenda de feiras
+
+A página `como-nos-encontrar.html` mostra os locais fixos e as feiras temporárias, com links para o Google Maps. A agenda considera o dia em Curitiba: feiras futuras aparecem como próximas, as atuais ficam em andamento e as encerradas ficam no histórico recolhido.
+
+O editor de feiras fica somente no computador do responsável, **fora deste pacote público**. O site não possui painel de edição nem rota para gravar dados. A agenda é publicada pelo responsável ao substituir `assets/agenda/agenda.js` na sua conta do GitHub.
+
+As instruções e as fontes oficiais consultadas estão em `assets/agenda/COMO-ATUALIZAR.txt`. Para atualizar apenas esta nova aba em um repositório que já recebeu os três lotes, reenvie o conteúdo de `LOTE-1`.

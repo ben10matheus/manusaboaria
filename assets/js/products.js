@@ -21,7 +21,7 @@ window.MANU = {
       "price": 89,
       "image": "assets/images/difusor-mangaja.webp",
       "description": "Difusor com varetas. · 200 ml",
-      "detail": "Perfume o seu cantinho com o difusor da Manu. Acompanha varetas. A foto apresenta a versão Mangajá; converse com a Manu sobre outras fragrâncias disponíveis.",
+      "detail": "Perfume o seu cantinho com o difusor do Manu. Acompanha varetas. A foto apresenta a versão Mangajá; converse com o Manu sobre outras fragrâncias disponíveis.",
       "size": "200 ml · com varetas"
     },
     {
@@ -54,7 +54,7 @@ window.MANU = {
       "price": 25,
       "image": "assets/images/sabonete-barbatimao.webp",
       "description": "Sabonete artesanal de barbatimão.",
-      "detail": "Sabonete artesanal de barbatimão em formato redondo. Uma opção da linha de banho da Manu. Valor por unidade; imagem ilustrativa da coleção.",
+      "detail": "Sabonete artesanal de barbatimão em formato redondo. Uma opção da linha de banho do Manu. Valor por unidade; imagem ilustrativa da coleção.",
       "size": "1 unidade"
     },
     {
@@ -76,7 +76,7 @@ window.MANU = {
       "price": 45,
       "image": "assets/images/geleia-banho.webp",
       "description": "Geleia corporal para banho. · 200 ml",
-      "detail": "Geleia corporal para banho da Manu Saboaria. Na foto, Cereja e Avelã e Capim Limão. Valor por frasco. Informe a sua preferência de aroma nas observações da sacola.",
+      "detail": "Geleia corporal para banho da marca Manu Saboaria. Na foto, Cereja e Avelã e Capim Limão. Valor por frasco. Informe a sua preferência de aroma nas observações da sacola.",
       "size": "200 ml · 1 unidade"
     },
     {
@@ -87,7 +87,7 @@ window.MANU = {
       "price": 98,
       "image": "assets/images/kit-arabescos.webp",
       "description": "Conjunto de quatro sabonetes em relevo.",
-      "detail": "Conjunto com quatro sabonetes artesanais com desenhos em relevo. Cores e detalhes que tornam o banho e o presente ainda mais especiais. Confirme as combinações disponíveis com a Manu.",
+      "detail": "Conjunto com quatro sabonetes artesanais com desenhos em relevo. Cores e detalhes que tornam o banho e o presente ainda mais especiais. Confirme as combinações disponíveis com o Manu.",
       "size": "Conjunto de 4 sabonetes"
     },
     {
@@ -109,7 +109,7 @@ window.MANU = {
       "price": 30,
       "image": "assets/images/escalda-pes-grande.webp",
       "description": "Escalda-pés em pote grande.",
-      "detail": "Uma proposta de pausa para a sua rotina. O escalda-pés da Manu aparece na foto nas versões Entre Pétalas e Rosas. Valor por pote grande. Siga as instruções do rótulo para preparar o seu ritual.",
+      "detail": "Uma proposta de pausa para a sua rotina. O escalda-pés do Manu aparece na foto nas versões Entre Pétalas e Rosas. Valor por pote grande. Siga as instruções do rótulo para preparar o seu ritual.",
       "size": "1 pote · tamanho grande"
     },
     {
@@ -131,7 +131,7 @@ window.MANU = {
       "price": 47,
       "image": "assets/images/espuma-banho.webp",
       "description": "Espuma de banho. · 200 ml",
-      "detail": "Espuma de banho da Manu Saboaria, fotografada na fragrância Pitanga. Valor por frasco. Converse com a Manu sobre os aromas disponíveis e siga as orientações de uso do rótulo.",
+      "detail": "Espuma de banho da marca Manu Saboaria, fotografada na fragrância Pitanga. Valor por frasco. Converse com o Manu sobre os aromas disponíveis e siga as orientações de uso do rótulo.",
       "size": "200 ml · 1 unidade"
     },
     {
@@ -142,7 +142,7 @@ window.MANU = {
       "price": 47,
       "image": "assets/images/agua-perfumada-250.webp",
       "description": "Água perfumada em frasco de 250 ml.",
-      "detail": "Água perfumada em frasco de 250 ml. A foto mostra algumas opções da linha. Informe a sua preferência nas observações; a Manu confirma as fragrâncias disponíveis. Siga as orientações do rótulo.",
+      "detail": "Água perfumada em frasco de 250 ml. A foto mostra algumas opções da linha. Informe a sua preferência nas observações; o Manu confirma as fragrâncias disponíveis. Siga as orientações do rótulo.",
       "size": "250 ml · 1 unidade"
     },
     {
@@ -175,7 +175,7 @@ window.MANU = {
       "price": 45,
       "image": "assets/images/sais-banho.webp",
       "description": "Sais para banho e banheira.",
-      "detail": "Sais de banho e banheira da Manu Saboaria. A foto apresenta a versão Pitanga Preta. Consulte os aromas e siga as instruções da embalagem para uso.",
+      "detail": "Sais de banho e banheira da marca Manu Saboaria. A foto apresenta a versão Pitanga Preta. Consulte os aromas e siga as instruções da embalagem para uso.",
       "size": "1 pote"
     },
     {
@@ -208,7 +208,7 @@ window.MANU = {
       "price": 30,
       "image": "assets/images/incenso-lavanda.webp",
       "description": "Incenso aromático em frasco.",
-      "detail": "Incenso da Manu Saboaria em frasco. Na foto, a versão Lavanda. Consulte outras opções de aroma e utilize em local ventilado, em suporte adequado, seguindo o rótulo.",
+      "detail": "Incenso da marca Manu Saboaria em frasco. Na foto, a versão Lavanda. Consulte outras opções de aroma e utilize em local ventilado, em suporte adequado, seguindo o rótulo.",
       "size": "1 frasco"
     },
     {
@@ -219,7 +219,7 @@ window.MANU = {
       "price": 10,
       "image": "assets/images/fosforos.webp",
       "description": "Fósforos em frasco de vidro com rolha.",
-      "detail": "Fósforos em frasco de vidro com rolha. Um complemento para combinar com as velas da Manu e compor um presente. Mantenha longe de crianças e de fontes de calor.",
+      "detail": "Fósforos em frasco de vidro com rolha. Um complemento para combinar com as velas do Manu e compor um presente. Mantenha longe de crianças e de fontes de calor.",
       "size": "1 frasco"
     },
     {
@@ -252,7 +252,7 @@ window.MANU = {
       "price": 15,
       "image": "assets/images/sabonete-calendula.webp",
       "description": "Sabonete artesanal de calêndula.",
-      "detail": "Sabonete artesanal em barra de Calêndula. O valor é por unidade. Confirme a disponibilidade com a Manu.",
+      "detail": "Sabonete artesanal em barra de Calêndula. O valor é por unidade. Confirme a disponibilidade com o Manu.",
       "size": "1 unidade"
     },
     {
@@ -263,7 +263,7 @@ window.MANU = {
       "price": null,
       "image": "assets/images/sabonete-liquido.webp",
       "description": "Sabonete líquido. · 250 ml",
-      "detail": "Sabonete líquido da Manu Saboaria. A foto apresenta a versão Aveia e Amêndoas. Consulte com a Manu o valor atualizado e as fragrâncias disponíveis.",
+      "detail": "Sabonete líquido da marca Manu Saboaria. A foto apresenta a versão Aveia e Amêndoas. Consulte com o Manu o valor atualizado e as fragrâncias disponíveis.",
       "size": "250 ml"
     },
     {
@@ -274,7 +274,7 @@ window.MANU = {
       "price": null,
       "image": "assets/images/creme-maos.webp",
       "description": "Creme de mãos. · 60 ml",
-      "detail": "Creme de mãos da Manu, fotografado na versão Jardim Secreto. Consulte o valor atualizado, os aromas e a disponibilidade no atendimento.",
+      "detail": "Creme de mãos do Manu, fotografado na versão Jardim Secreto. Consulte o valor atualizado, os aromas e a disponibilidade no atendimento.",
       "size": "60 ml"
     },
     {
@@ -285,7 +285,7 @@ window.MANU = {
       "price": null,
       "image": "assets/images/presente-carinho.webp",
       "description": "Composição de produtos sob consulta.",
-      "detail": "Combine os produtos favoritos de quem você ama. A imagem é uma referência de composição. Conte para a Manu a sua ideia, a ocasião e o orçamento para receber as opções de presente.",
+      "detail": "Combine os produtos favoritos de quem você ama. A imagem é uma referência de composição. Conte para o Manu a sua ideia, a ocasião e o orçamento para receber as opções de presente.",
       "size": "Composição sob consulta"
     }
   ]

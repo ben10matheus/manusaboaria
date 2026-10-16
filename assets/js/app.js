@@ -279,7 +279,7 @@
         purchase.append(consult);
       }
       info.append(purchase);
-      if (isPriced(product)) info.append(element('p', 'dialog-product-note', 'Seu pedido será combinado com a Manu pelo WhatsApp.'));
+      if (isPriced(product)) info.append(element('p', 'dialog-product-note', 'Seu pedido será combinado com o Manu pelo WhatsApp.'));
       layout.append(imageWrap, info);
       productContent.replaceChildren(layout);
       if (productDialog) productDialog.setAttribute('aria-labelledby', title.id);

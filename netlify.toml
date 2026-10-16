@@ -1,6 +1,19 @@
 [build]
   publish = "."
 
+# A ferramenta de manutenção fica somente no computador do responsável.
+[[redirects]]
+  from = "/manutencao/*"
+  to = "/404.html"
+  status = 404
+  force = true
+
+[[redirects]]
+  from = "/ATUALIZAR-FEIRAS.html"
+  to = "/404.html"
+  status = 404
+  force = true
+
 [[headers]]
   for = "/*"
   [headers.values]
