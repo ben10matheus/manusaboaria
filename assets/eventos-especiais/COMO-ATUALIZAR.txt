@@ -1,0 +1,38 @@
+EVENTOS ESPECIAIS — MANUTENÇÃO DAS CINCO IMAGENS
+
+Todas as fotos desta aba estão nesta pasta:
+assets/eventos-especiais/
+
+capa.jpg       Imagem principal, no início da página.
+especial1.jpg  Primeira imagem da seção de inspirações.
+especial2.jpg  Segunda imagem.
+especial3.jpg  Terceira imagem.
+especial4.jpg  Quarta imagem.
+
+PARA TROCAR UMA IMAGEM
+
+1. Salve a nova foto em JPG/JPEG de verdade.
+2. Substitua o arquivo desejado mantendo o nome completo acima, com .jpg.
+   Exemplo: uma nova foto de capa deve se chamar capa.jpg.
+3. Abra config.js, nesta mesma pasta, e ajuste title (legenda) e alt
+   (descrição acessível) para corresponder à nova imagem.
+4. Abra eventos-especiais.html para conferir.
+5. Envie os arquivos alterados para os mesmos caminhos no GitHub.
+   Depois do deploy, recarregue a página. Se necessário, use Ctrl+F5.
+
+As imagens atuais são referências de produtos e presentes do acervo da Manu.
+Elas podem ser substituídas pelas fotos do evento ou coleção que você desejar.
+Os arquivos das outras páginas e da galeria ficam em pastas separadas.
+
+RECOMENDAÇÕES PARA AS FOTOS
+
+Prefira fotos com boa luz e cores naturais. Fotos verticais funcionam bem
+no layout; na ampliação, a imagem inteira aparece sem corte. Use imagens
+com pelo menos 1200 pixels no lado maior e evite colocar textos pequenos
+dentro da foto. O título e a descrição podem ficar no config.js.
+
+As legendas ficam em assets/eventos-especiais/config.js.
+Os textos de apresentação ficam em eventos-especiais.html.
+As regras visuais ficam em assets/css/marca.css.
+O WhatsApp dos contatos de eventos também pode ser ajustado no config.js;
+se mudar o número da marca, atualize os links fixos das demais páginas.

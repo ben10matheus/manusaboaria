@@ -49,7 +49,7 @@
     }
 
     function contactURL(image) {
-      const lines = ['Olá, Manu! 💙 Vi a foto ' + photoNumber(image) + ' da galeria do site: ' + image.title + '.', 'Pode me contar sobre as opções, os valores e a disponibilidade?'];
+      const lines = ['Olá, Manu! Vi a foto ' + photoNumber(image) + ' da galeria do site: ' + image.title + '.', 'Pode me contar sobre as opções, os valores e a disponibilidade?'];
       try {
         const imageURL = new URL(image.src, window.location.href);
         if (imageURL.protocol === 'https:' || imageURL.protocol === 'http:') lines.push('', 'Foto de referência: ' + imageURL.href);
@@ -194,4 +194,15 @@
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });
   else init();
+})();
+
+(() => {
+  const toggle = document.getElementById('menu-toggle');
+  const nav = document.getElementById('mobile-nav');
+  if (!toggle || !nav) return;
+  function close() { nav.hidden = true; toggle.setAttribute('aria-expanded', 'false'); }
+  toggle.addEventListener('click', () => { const open = toggle.getAttribute('aria-expanded') === 'true'; nav.hidden = open; toggle.setAttribute('aria-expanded', String(!open)); });
+  nav.addEventListener('click', event => { if (event.target.closest('a')) close(); });
+  document.addEventListener('keydown', event => { if (event.key === 'Escape' && !nav.hidden) { close(); toggle.focus(); } });
+  document.addEventListener('click', event => { if (!nav.hidden && !nav.contains(event.target) && !toggle.contains(event.target)) close(); });
 })();

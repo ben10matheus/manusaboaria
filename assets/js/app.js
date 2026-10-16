@@ -66,7 +66,7 @@
     }
 
     function consultationMessage(product, quantity = 1) {
-      return 'Olá, Manu! 💙 Gostaria de saber mais sobre ' + product.name + (quantity > 1 ? ' (' + quantity + ' unidades)' : '') + '. Pode me passar o valor e as opções disponíveis?';
+      return 'Olá, Manu! Gostaria de saber mais sobre ' + product.name + (quantity > 1 ? ' (' + quantity + ' unidades)' : '') + '. Pode me passar o valor e as opções disponíveis?';
     }
 
     function notify(message) {
@@ -297,7 +297,7 @@
       else state.cart.push({ id, quantity: next });
       saveCart();
       renderCart();
-      notify(next === previous ? 'Limite de 99 unidades por produto.' : product.name + ' na sua sacola 💙');
+      notify(next === previous ? 'Limite de 99 unidades por produto.' : product.name + ' adicionado à sacola.');
     }
 
     function cartTotal() {
@@ -305,7 +305,7 @@
     }
 
     function orderMessage() {
-      const lines = ['Olá, Manu! 💙 Gostaria de fazer este pedido:', ''];
+      const lines = ['Olá, Manu! Gostaria de fazer este pedido:', ''];
       state.cart.forEach(item => {
         const product = productMap.get(item.id);
         lines.push('• ' + item.quantity + ' × ' + product.name + ' — ' + priceLabel(product) + ' cada = ' + currency.format(product.price * item.quantity));
