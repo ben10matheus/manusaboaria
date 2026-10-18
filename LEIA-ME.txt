@@ -63,6 +63,13 @@ assets/css/search.css. A página usa assets/css/search-page.css e app.js.
 A busca ignora acentos, reconhece plurais e sugere termos próximos, sem
 repetir os correspondentes no grupo de parecidos.
 
+FOTO ORIGINAL DO BANNER — 18/10/2026
+
+O banner usa a foto mais original enviada em 18/10/2026, preservada
+exatamente como recebida em assets/images/manu-banner.png (1536 x 1024).
+O site não aplica retoque no rosto, filtro ou distorção à fotografia.
+O texto foi ajustado para: para você, a casa e para presentear.
+
 COMO NOS ENCONTRAR — AGENDA
 
 A página como-nos-encontrar.html reúne os quatro locais fixos, as feiras
