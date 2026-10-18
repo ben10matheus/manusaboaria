@@ -56,11 +56,11 @@ A abertura foi recriada com texto e botão funcionais em HTML, fundo creme e for
 
 ## Ajustes do documento de 17 de outubro
 
-O menu segue a ordem Início, Produtos, Presentes, Coleções Especiais, Nossa História e Onde nos Encontrar, mantendo Fale conosco. A busca do cabeçalho funciona no catálogo e, nas outras páginas, leva a consulta à home. No celular, o campo está no menu.
+O menu segue a ordem Início, Produtos, Presentes, Coleções Especiais, Nossa História e Onde encontrar, mantendo Fale conosco. A busca do cabeçalho funciona no catálogo e, nas outras páginas, leva a consulta à home. No celular, o campo está no menu.
 
 Os três cartões usam as fotos extraídas do DOCX, preservadas em `assets/images/categorias-ajustes.png`, com títulos editáveis e a mesma seta diagonal dos demais links. Para Você filtra sabonetes e banho/cuidado; Para Casa e Para Presentear mantêm os filtros correspondentes. Os estilos ficam em `assets/css/categorias.css` e `assets/css/ajustes.css`; a busca é integrada por `assets/js/site-search.js`. O documento de referência e o editor privado ficam fora da publicação.
 
-A foto atual do banner fica em `assets/images/manu-banner.png`. A foto anterior, em `assets/images/manu-na-feira.png`, permanece em Nossa História e Onde nos Encontrar.
+A foto atual do banner fica em `assets/images/manu-banner.png`. A foto anterior, em `assets/images/manu-na-feira.png`, permanece em Nossa História e Onde encontrar.
 
 ## Pesquisa de produtos
 

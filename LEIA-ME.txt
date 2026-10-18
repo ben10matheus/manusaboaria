@@ -29,12 +29,12 @@ ABERTURA INSPIRADA NO CANVA
 A abertura tem texto e botão funcionais em HTML/CSS e a foto real do Manu.
 O estilo fica em assets/css/canva.css; o banner usa a nova versão enviada,
 assets/images/manu-banner.png. A foto anterior, assets/images/manu-na-feira.png,
-permanece nas seções Nossa História e Onde nos Encontrar.
+permanece nas seções Nossa História e Onde encontrar.
 
 AJUSTES DO DOCUMENTO DE 17/10/2026
 
 Menu: Início, Produtos, Presentes, Coleções Especiais, Nossa História e
-Onde nos Encontrar, com Fale conosco ao lado e busca de produtos no cabeçalho.
+Onde encontrar, com Fale conosco ao lado e busca de produtos no cabeçalho.
 No celular, a busca fica dentro do menu. Em outra página, ela leva o termo
 à página pesquisa.html?q=TERMO, com todos os correspondentes e parecidos.
 
