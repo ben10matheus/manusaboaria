@@ -1,8 +1,8 @@
 MANU SABOARIA — SITE PRONTO PARA PUBLICAR
-Preparado em 15/10/2026. Atualizado em 17/10/2026 com os ajustes do documento.
+Preparado em 15/10/2026. Atualizado em 18/10/2026 com os três documentos selecionados.
 
 Esta pasta contém o site completo: 26 itens de catálogo, 32 imagens de destaque,
-galeria com TODAS as 137 imagens do arquivo, sacola e pedidos pelo WhatsApp.
+137 fotos preservadas da antiga galeria, sacola e pedidos pelo WhatsApp.
 Tamanho aproximado: 33,1 MB. Três itens têm valor sob consulta.
 
 PASTA PRINCIPAL NA ÁREA DE TRABALHO
@@ -85,12 +85,12 @@ Exemplos de preço no arquivo:
 
 Use ponto para os centavos, sem o símbolo R$ e sem vírgula. Preserve as aspas,
 vírgulas e chaves da estrutura. Salve, recarregue o site e confira o resultado.
-O campo phone no início do mesmo arquivo define o WhatsApp da sacola. Os links de contato fixos em index.html, galeria.html, app.js e gallery.js também devem ser atualizados se o número mudar.
+O campo phone no início do mesmo arquivo define o WhatsApp da sacola. Os links de contato fixos nas páginas públicas e nos scripts de atendimento também devem ser atualizados se o número mudar.
 Use o número completo, somente dígitos: país + DDD + número.
 
 5. IMAGENS E APARÊNCIA
 
-As fotos de destaque ficam em assets/images. A galeria completa está em galeria.html e reúne as 137 imagens convertidas do arquivo enviado. Todas ficam em assets/galeria, em WebP, sem depender do Google Fotos. A lista e os títulos da galeria estão em assets/js/gallery-data.js; o comportamento está em assets/js/gallery.js. Os 115 vídeos do arquivo original não foram incorporados, pois a galeria reúne as imagens. Para substituir uma imagem, mantenha o mesmo
+As fotos de destaque ficam em assets/images. As 137 imagens convertidas do arquivo enviado continuam preservadas em assets/galeria, em WebP, sem depender do Google Fotos. A galeria foi retirada da interface e dos links públicos; galeria.html agora redireciona ao catálogo. assets/js/gallery-data.js e assets/js/gallery.js permanecem como arquivos da galeria anterior, sem uma interface pública ativa. Os 115 vídeos do arquivo original não foram incorporados. Para substituir uma imagem, mantenha o mesmo
 nome e formato ou atualize o campo image do produto correspondente em
 assets/js/products.js. Use fotos otimizadas para carregar rapidamente.
 
@@ -154,29 +154,31 @@ A página fale-conosco.html reúne WhatsApp, Instagram e as dúvidas frequentes
 abaixo dos canais. O menu usa, nesta ordem: Início, Produtos, Presentes,
 Coleções Especiais, Nossa História e Onde encontrar. Fale conosco continua
 em um botão separado no cabeçalho e também aparece no menu do celular.
-A Galeria continua acessível pelo catálogo e pelos rodapés.
+Presentes abre o grupo Para Presentear do catálogo. O bloco promocional antigo
+foi retirado. A galeria não aparece mais na interface nem nos rodapés;
+o endereço antigo galeria.html redireciona ao catálogo.
 
 9. ABERTURA CONFORME A REFERÊNCIA DO CANVA
 
 A abertura usa fundo creme quente, formas suaves em verde e rosa,
-o título Sabonetes, velas e aromas, o complemento "para você, para a casa e
+o título Sabonetes, velas e aromas, o complemento "para você, a casa e
 para presentear." e o botão "Conheça os nossos produtos.".
 Texto, elementos decorativos e botão são HTML/CSS e se adaptam à tela.
 O acabamento desta abertura fica em assets/css/canva.css.
 
 A fotografia original do Manu fica em assets/images/manu-na-feira.png.
-Ela aparece na abertura, na seção Nossa História, sobre o Manu, e na página
-Onde encontrar.
+Ela aparece na seção Nossa História, sobre o Manu, e na página Onde encontrar.
+A abertura usa a foto enviada para assets/images/manu-banner.png.
 O arquivo original foi preservado sem alterações de pixels ou de rosto.
 As fotografias anteriores continuam guardadas nas respectivas pastas.
-O catálogo, os preços, a galeria e as coleções especiais foram mantidos.
+O catálogo, os preços, as fotos preservadas e as coleções especiais foram mantidos.
 
 10. ROTINA PARA AS PRÓXIMAS ATUALIZAÇÕES
 
 1) Na Área de Trabalho, abra "Manu Saboaria" e entre na pasta completa "site".
 2) Faça as alterações nessa mesma pasta, somente nos arquivos necessários.
    Preserve os nomes, os caminhos e todos os arquivos que não precisam mudar.
-3) Abra index.html nessa pasta e confira também a galeria e os eventos.
+3) Abra index.html nessa pasta e confira os grupos do catálogo e as coleções.
 4) Para um repositório já publicado, envie apenas os arquivos novos ou alterados
    aos mesmos caminhos no GitHub. Os arquivos da raiz continuam na raiz e os
    arquivos de assets continuam nas respectivas subpastas de assets.
@@ -200,10 +202,10 @@ mesmo quando as imagens de referência mostram nomes anteriores.
 O acabamento do cabeçalho, da busca e das setas fica em assets/css/ajustes.css.
 
 A busca do cabeçalho funciona pelo botão da lupa ou pela tecla Enter.
-No celular, abra o menu para acessar o campo. Na home, o resultado aparece
-no catálogo; em outra página, a busca abre index.html?q=TERMO#colecao.
-O parâmetro q leva o termo ao catálogo. assets/js/site-search.js conecta os
-campos do cabeçalho à busca existente em assets/js/app.js.
+No celular, abra o menu para acessar o campo. Os formulários abrem
+pesquisa.html?q=TERMO, com todos os correspondentes e opções parecidas abaixo.
+O parâmetro q leva o termo à pesquisa. assets/js/site-search.js controla as
+sugestões e usa o motor compartilhado com assets/js/app.js.
 
 Depois do banner, a seção de categorias usa o título "Formas de levar mais
 bem-estar para o seu dia." e o subtítulo "Descubra o que combina com você,
@@ -253,6 +255,40 @@ O banner usa a foto mais original enviada em 18/10/2026, preservada
 exatamente como recebida em assets/images/manu-banner.png (1536 x 1024).
 O site não aplica retoque no rosto, filtro ou distorção à fotografia.
 O texto foi ajustado para: para você, a casa e para presentear.
+
+CATÁLOGO, PRESENTES E NOSSA HISTÓRIA — 18/10/2026
+
+Os três documentos selecionados foram aplicados ao catálogo, à navegação de
+Presentes, à história aprovada e à retirada da galeria da interface.
+Os grupos e filtros ficam em catalogGroups, dentro de assets/js/app.js:
+
+Para Você: Body Splash, Creme Hidratante, Escalda Pés, Espuma de Banho,
+Geleia de Banho, Loção Pós Barba, Sabonetes e Sais de Banho.
+Título: Seu momento de pausa e bem-estar.
+
+Para a Casa: Velas, Água Perfumada, Difusores de Ambiente e Incenso.
+Título: Aroma que dá vida ao lar.
+
+Para Presentear: Até R$ 39,90, Até R$ 69,90, Até R$ 99,90 e A partir de R$ 99,90.
+Título: Surpreenda com algo especial.
+As ideias de presente usam os produtos existentes. As faixas incluem os
+limites indicados e não incluem produtos com valor sob consulta.
+O menu Presentes abre index.html?categoria=presentes#colecao, no grupo
+Para Presentear. O bloco antigo "Um presente. Um jeito de cuidar." foi retirado.
+
+Body Splash e Loção Pós Barba ainda não têm registros no catálogo. Nenhum
+preço atual atinge R$ 99,90; esses filtros podem mostrar zero resultados.
+Não foram inventados produtos, fotos ou valores para preenchê-los.
+
+Nossa História usa "Uma história feita de cuidado." e os quatro parágrafos
+aprovados sobre a pandemia, Manoel e Margarete e o trabalho artesanal.
+O texto identifica a empresa como "A marca Manu Saboaria" e mantém o Manu
+no masculino. A fotografia original da seção foi preservada.
+
+Após os produtos, a frase é: "A disponibilidade dos produtos e fragrâncias,
+assim como o frete, será confirmada pelo WhatsApp ao enviar o pedido."
+A galeria não é mais exibida. As 137 fotos permanecem em assets/galeria;
+galeria.html redireciona ao catálogo. Preserve esses arquivos.
 
 COMO NOS ENCONTRAR — AGENDA
 

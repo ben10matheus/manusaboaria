@@ -10,10 +10,10 @@
     const currency = new Intl.NumberFormat('pt-BR', { style: 'currency', currency: 'BRL' });
     const storageKey = 'manu-cart-v1';
     const pageSize = 12;
-    const state = { filter: 'all', search: '', sort: 'featured', visible: pageSize, cart: [], notes: '' };
+    const isSearchPage = document.body.classList.contains('search-page');
+    const state = { filter: isSearchPage ? 'all' : 'voce', type: 'all', search: '', sort: 'featured', visible: pageSize, cart: [], notes: '' };
     const $ = id => document.getElementById(id);
     const grid = $('product-grid');
-    const isSearchPage = document.body.classList.contains('search-page');
     const similarGrid = $('similar-grid');
     const productDialog = $('product-dialog');
     const cartDialog = $('cart-dialog');
@@ -23,6 +23,48 @@
     let previousOverflow = null;
     let selectedProduct = null;
     let selectedQuantity = 1;
+    let renderedTypeGroup = null;
+    // Textos e selecoes do catalogo ficam juntos para facilitar a manutencao.
+    // IDs ausentes nao criam produtos nem valores: essas selecoes ficam vazias.
+    const catalogGroups = {
+      voce: {
+        eyebrow: 'PARA VOCÊ',
+        title: 'Seu momento de pausa e bem-estar.',
+        intro: '',
+        types: [
+          { id: 'body-splash', label: 'Body Splash', ids: [] },
+          { id: 'creme-hidratante', label: 'Creme Hidratante', ids: ['creme-maos'] },
+          { id: 'escalda-pes', label: 'Escalda Pés', ids: ['escalda-grande', 'escalda-pequeno'] },
+          { id: 'espuma-de-banho', label: 'Espuma de Banho', ids: ['espuma'] },
+          { id: 'geleia-de-banho', label: 'Geleia de Banho', ids: ['geleia'] },
+          { id: 'locao-pos-barba', label: 'Loção Pós Barba', ids: [] },
+          { id: 'sabonetes', label: 'Sabonetes', ids: ['liquido'], category: 'sabonetes' },
+          { id: 'sais-de-banho', label: 'Sais de Banho', ids: ['sais'] }
+        ]
+      },
+      casa: {
+        eyebrow: 'PARA A CASA',
+        title: 'Aroma que dá vida ao lar.',
+        intro: '',
+        types: [
+          { id: 'velas', label: 'Velas', ids: ['vela-vidro', 'capivela', 'vela-latinha', 'vela-decorada'] },
+          { id: 'agua-perfumada', label: 'Água Perfumada', ids: ['agua-100', 'agua-250'] },
+          { id: 'difusores-de-ambiente', label: 'Difusores de Ambiente', ids: ['difusor-200', 'refil-difusor'] },
+          { id: 'incenso', label: 'Incenso', ids: ['incenso'] }
+        ]
+      },
+      presentes: {
+        eyebrow: 'PARA PRESENTEAR',
+        title: 'Surpreenda com algo especial.',
+        intro: 'Encontre o presente ideal para cada ocasião. Se quiser, personalize pelo WhatsApp, combinando produtos de acordo com suas preferências.',
+        types: [
+          { id: 'ate-3990', label: 'Até R$ 39,90', max: 39.9 },
+          { id: 'ate-6990', label: 'Até R$ 69,90', max: 69.9 },
+          { id: 'ate-9990', label: 'Até R$ 99,90', max: 99.9 },
+          { id: 'a-partir-9990', label: 'A partir de R$ 99,90', min: 99.9 }
+        ]
+      }
+    };
 
     function element(tag, className, text) {
       const node = document.createElement(tag);
@@ -190,15 +232,76 @@
       return article;
     }
 
+    function hasCatalogGroup(value) {
+      return typeof value === 'string' && Object.prototype.hasOwnProperty.call(catalogGroups, value);
+    }
+
+    function catalogTarget(value) {
+      if (hasCatalogGroup(value)) return { group: value, type: 'all' };
+      if (value === 'banho' || value === 'all' || value === 'todos') return { group: 'voce', type: 'all' };
+      for (const [group, settings] of Object.entries(catalogGroups)) {
+        const type = settings.types.find(item => item.id === value);
+        if (type) return { group, type: type.id };
+      }
+      return null;
+    }
+
+    function matchesCatalogSelection(product) {
+      // A pagina de pesquisa sempre mostra todos os matches do motor de busca.
+      if (isSearchPage || state.filter === 'all' || state.filter === 'todos') return true;
+      const settings = hasCatalogGroup(state.filter) ? catalogGroups[state.filter] : null;
+      if (!settings) return false;
+      const inGroup = state.filter === 'presentes'
+        || (state.filter === 'casa' && product.category === 'casa')
+        || (state.filter === 'voce' && (product.category === 'sabonetes' || product.category === 'banho'));
+      if (!inGroup) return false;
+      if (state.type === 'all') return true;
+      const type = settings.types.find(item => item.id === state.type);
+      if (!type) return true;
+      if (state.filter === 'presentes') {
+        return isPriced(product) && (type.min === undefined || product.price >= type.min)
+          && (type.max === undefined || product.price <= type.max);
+      }
+      return type.ids.includes(product.id) || (type.category && product.category === type.category);
+    }
+
+    function renderCatalogControls() {
+      if (isSearchPage) return;
+      const group = hasCatalogGroup(state.filter) ? state.filter : 'voce';
+      const settings = catalogGroups[group];
+      if ($('catalog-eyebrow')) $('catalog-eyebrow').textContent = settings.eyebrow;
+      if ($('collection-title')) $('collection-title').textContent = settings.title;
+      if ($('catalog-intro')) {
+        $('catalog-intro').textContent = settings.intro;
+        $('catalog-intro').hidden = !settings.intro;
+      }
+      const target = $('catalog-type-filters');
+      if (!target) return;
+      target.setAttribute('role', 'group');
+      target.setAttribute('aria-label', 'Filtrar ' + settings.eyebrow.toLowerCase());
+      if (renderedTypeGroup !== group || target.children.length !== settings.types.length) {
+        const fragment = document.createDocumentFragment();
+        settings.types.forEach(type => {
+          const button = element('button', 'catalog-type-button', type.label);
+          button.type = 'button';
+          button.dataset.typeFilter = type.id;
+          fragment.append(button);
+        });
+        target.replaceChildren(fragment);
+        renderedTypeGroup = group;
+      }
+      target.querySelectorAll('[data-type-filter]').forEach(button => {
+        const active = button.dataset.typeFilter === state.type;
+        button.classList.toggle('active', active);
+        button.setAttribute('aria-pressed', String(active));
+        button.title = active ? 'Mostrar todos os tipos deste grupo' : 'Filtrar por ' + button.textContent;
+      });
+    }
+
     function filteredProducts() {
       const query = normalized(state.search).trim();
       const candidates = query && window.ManuSearch ? window.ManuSearch.search(products, state.search).matches : (isSearchPage ? [] : products);
-      const matches = candidates.filter(product => {
-        const matchesCategory = state.filter === 'all' || state.filter === 'todos'
-          || (state.filter === 'voce' && (product.category === 'sabonetes' || product.category === 'banho'))
-          || product.category === state.filter;
-        return matchesCategory;
-      });
+      const matches = candidates.filter(matchesCatalogSelection);
       if (state.sort === 'price-low') matches.sort((a, b) => (isPriced(a) ? a.price : Infinity) - (isPriced(b) ? b.price : Infinity));
       if (state.sort === 'price-high') matches.sort((a, b) => (isPriced(b) ? b.price : -Infinity) - (isPriced(a) ? a.price : -Infinity));
       if (state.sort === 'name') matches.sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
@@ -207,6 +310,7 @@
 
     function renderCatalog() {
       if (!grid) return;
+      renderCatalogControls();
       const matches = filteredProducts();
       const shown = isSearchPage ? matches : matches.slice(0, state.visible);
       const fragment = document.createDocumentFragment();
@@ -243,7 +347,10 @@
 
     function applyCatalogSearch(query, options = {}) {
       state.search = typeof query === 'string' ? query : '';
-      if (options.resetFilter) state.filter = 'all';
+      if (options.resetFilter) {
+        state.filter = 'all';
+        state.type = 'all';
+      }
       state.visible = pageSize;
       if ($('catalog-search')) $('catalog-search').value = state.search;
       document.querySelectorAll('[data-site-search] input[name="q"]').forEach(input => {
@@ -255,6 +362,7 @@
           const url = new URL(window.location.href);
           if (state.search.trim()) url.searchParams.set('q', state.search.trim());
           else url.searchParams.delete('q');
+          if (!isSearchPage && hasCatalogGroup(state.filter)) url.searchParams.set('categoria', state.filter);
           if (options.scroll) url.hash = 'colecao';
           window.history.replaceState(null, '', url.href);
         } catch (_) {
@@ -451,16 +559,31 @@
     }));
 
     document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
-      state.filter = button.dataset.filter || 'all';
-      state.visible = pageSize;
-      renderCatalog();
+      if (isSearchPage) return;
+      const target = catalogTarget(button.dataset.filter);
+      if (!target) return;
+      state.filter = target.group;
+      state.type = 'all';
+      applyCatalogSearch('');
     }));
 
+    if ($('catalog-type-filters')) $('catalog-type-filters').addEventListener('click', event => {
+      const button = event.target.closest('button[data-type-filter]');
+      const target = $('catalog-type-filters');
+      if (!button || !target.contains(button) || isSearchPage) return;
+      state.type = state.type === button.dataset.typeFilter ? 'all' : button.dataset.typeFilter;
+      state.visible = pageSize;
+      renderCatalog();
+    });
+
     document.querySelectorAll('[data-category-link]').forEach(link => link.addEventListener('click', event => {
-      const category = link.dataset.categoryLink;
-      if (!category) return;
+      if (isSearchPage) return;
+      const target = catalogTarget(link.dataset.categoryLink);
+      if (!target) return;
       event.preventDefault();
-      state.filter = category;
+      state.filter = target.group;
+      state.type = target.type;
+      closeMobileMenu();
       applyCatalogSearch('', { scroll: true });
     }));
 
@@ -570,13 +693,23 @@
 
     restoreCart();
     let initialQuery = null;
+    let initialCategory = null;
     try {
-      initialQuery = new URLSearchParams(window.location.search).get('q');
+      const params = new URLSearchParams(window.location.search);
+      initialQuery = params.get('q');
+      initialCategory = params.get('categoria');
     } catch (_) {
       // Browsers without a usable query string start with the complete catalogue.
     }
     if (grid && initialQuery !== null) applyCatalogSearch(initialQuery, { resetFilter: true, scroll: !isSearchPage, instant: true, updateURL: false });
-    else renderCatalog();
+    else {
+      if (!isSearchPage && hasCatalogGroup(initialCategory)) {
+        state.filter = initialCategory;
+        state.type = 'all';
+      }
+      renderCatalog();
+      if (grid && !isSearchPage && hasCatalogGroup(initialCategory)) scrollToCatalog(true);
+    }
     renderCart();
     if (isSearchPage) {
       const productId = new URLSearchParams(window.location.search).get('produto');

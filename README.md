@@ -1,6 +1,6 @@
 # Manu Saboaria
 
-Site da marca Manu Saboaria com catálogo, sacola, pedidos pelo WhatsApp, galeria completa e coleções especiais, locais e canais de contato.
+Site da marca Manu Saboaria com catálogo, sacola, pedidos pelo WhatsApp, coleções especiais, locais e canais de contato. As 137 fotos da antiga galeria foram preservadas nos arquivos.
 
 Este pacote contém o site inteiro, incluindo fotos, logo e fontes locais. Não depende do Google Fotos para exibir as imagens.
 
@@ -46,11 +46,13 @@ Abra `index.html` no navegador para visualizar. Mantenha todos os arquivos e a p
 | --- | --- |
 | Catálogo e preços | `assets/js/products.js` |
 | Fotos de destaque | `assets/images/` |
-| Galeria completa | `assets/galeria/` |
-| Lista da galeria | `assets/js/gallery-data.js` |
+| Fotos preservadas da antiga galeria | `assets/galeria/` |
+| Índice preservado da antiga galeria | `assets/js/gallery-data.js` |
 | Fotos da edição de primavera | `assets/eventos-especiais/primavera-2026/` |
 | Títulos e legendas das coleções | `assets/eventos-especiais/config.js` |
 | Cores e acabamento | `assets/css/marca.css` e `assets/css/acolhimento.css` |
+
+A galeria foi retirada da interface e dos links públicos. O endereço antigo `galeria.html` redireciona ao catálogo; as 137 fotos continuam preservadas em `assets/galeria/`.
 
 Em **Coleções especiais**, a edição **Tempo de Flores — Primavera** tem nove fotos: `capa.jpg` e `especial1.jpg` até `especial8.jpg`, em `assets/eventos-especiais/primavera-2026/`. O campo `basePath` em `assets/eventos-especiais/config.js` aponta para a edição ativa. As fotos anteriores foram preservadas. Veja `assets/eventos-especiais/COMO-ATUALIZAR.txt`.
 
@@ -60,15 +62,29 @@ Os pedidos são montados na sacola e enviados ao WhatsApp do Manu. A confirmaç�
 
 ## Abertura inspirada no Canva
 
-A abertura foi recriada com texto e botão funcionais em HTML, fundo creme e formas suaves. O acabamento fica em `assets/css/canva.css`. A fotografia original do Manu, em `assets/images/manu-na-feira.png`, também aparece em **O Manu** e **Onde encontrar**. Os arquivos de fotos anteriores foram preservados.
+A abertura foi recriada com texto e botão funcionais em HTML, fundo creme e formas suaves. O acabamento fica em `assets/css/canva.css`. A fotografia original do Manu, em `assets/images/manu-na-feira.png`, permanece em **Nossa História** e **Onde encontrar**. Os arquivos de fotos anteriores foram preservados.
 
 ## Ajustes do documento de 17 de outubro
 
-O menu segue a ordem Início, Produtos, Presentes, Coleções Especiais, Nossa História e Onde encontrar, mantendo Fale conosco. A busca do cabeçalho funciona no catálogo e, nas outras páginas, leva a consulta à home. No celular, o campo está no menu.
+O menu segue a ordem Início, Produtos, Presentes, Coleções Especiais, Nossa História e Onde encontrar, mantendo Fale conosco. A busca do cabeçalho está disponível também nas outras páginas e abre `pesquisa.html?q=TERMO`. No celular, o campo está no menu.
 
 Os três cartões usam as fotos extraídas do DOCX, preservadas em `assets/images/categorias-ajustes.png`, com títulos editáveis e a mesma seta diagonal dos demais links. Para Você filtra sabonetes e banho/cuidado; Para Casa e Para Presentear mantêm os filtros correspondentes. Os estilos ficam em `assets/css/categorias.css` e `assets/css/ajustes.css`; a busca é integrada por `assets/js/site-search.js`. O documento de referência e o editor privado ficam fora da publicação.
 
 A foto atual do banner fica em `assets/images/manu-banner.png`. A foto anterior, em `assets/images/manu-na-feira.png`, permanece em Nossa História e Onde encontrar.
+
+## Catálogo e história aprovados em 18 de outubro
+
+O catálogo usa três grupos, com filtros mantidos em `catalogGroups`, dentro de `assets/js/app.js`:
+
+- **Para Você:** Body Splash, Creme Hidratante, Escalda Pés, Espuma de Banho, Geleia de Banho, Loção Pós Barba, Sabonetes e Sais de Banho.
+- **Para a Casa:** Velas, Água Perfumada, Difusores de Ambiente e Incenso.
+- **Para Presentear:** Até R$ 39,90, Até R$ 69,90, Até R$ 99,90 e A partir de R$ 99,90. As ideias de presente usam o catálogo existente; os limites são inclusivos e os itens sob consulta ficam fora das faixas numéricas.
+
+O menu **Presentes** abre o grupo **Para Presentear** em `index.html?categoria=presentes#colecao`. O antigo bloco promocional “Um presente. Um jeito de cuidar.” foi retirado. Não foram criados produtos nem preços para preencher filtros: Body Splash e Loção Pós Barba ainda não têm registros no catálogo, e nenhuma opção com preço atual atinge R$ 99,90.
+
+**Nossa História** usa o título “Uma história feita de cuidado.” e os quatro parágrafos aprovados sobre a origem da marca durante a pandemia, Manoel e Margarete e o trabalho artesanal. A abertura usa “A marca Manu Saboaria” para distinguir a empresa da pessoa.
+
+Depois dos produtos, a frase é: “A disponibilidade dos produtos e fragrâncias, assim como o frete, será confirmada pelo WhatsApp ao enviar o pedido.” Os preços, as fotos, as fontes e as demais seções foram preservados.
 
 ## Pesquisa de produtos
 

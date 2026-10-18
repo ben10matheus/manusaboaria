@@ -24,3 +24,21 @@
 @media(max-width:1180px){.cozy-header .desktop-nav{display:none}.header-search-desktop{width:min(310px,40vw);max-width:310px;flex:1 1 220px}.cozy-header .brand{width:86px}.cozy-header .header-actions{gap:17px}.cozy-header .contact-link{font-size:11px;padding-inline:15px}.header-search input{font-size:12px}}
 @media(max-width:640px){.header-search-desktop{display:none}.cozy-header .header-inner.container{padding-inline:13px;gap:12px}.cozy-header .brand{width:86px}.cozy-header .header-actions{gap:15px}.cozy-header .contact-link{display:none}.header-search-mobile input{font-size:13px}.header-search-mobile button{width:25px;height:29px}}
 @media(max-width:640px){.home .canva-hero-copy .button{font-size:11px;letter-spacing:.2px;padding-inline:18px;gap:11px;white-space:nowrap}}
+
+/* Catalogo: tres grupos e filtros de tipos/faixas solicitados no documento. */
+.home .catalog-groups{display:flex;align-items:center;flex-wrap:wrap;gap:9px;margin-bottom:31px}
+.home .catalog-groups button{min-height:42px;padding:10px 19px;border:1px solid rgba(24,167,173,.23);border-radius:999px;background:#fff;color:#222;font-family:var(--sans);font-size:12px;line-height:1.4;transition:background .2s,border-color .2s}
+.home .catalog-groups button:hover{background:rgba(209,235,231,.25)}
+.home .catalog-groups button.active{background:rgba(209,235,231,.65);border-color:rgba(24,167,173,.4)}
+.home #colecao .section-heading{display:block;margin-bottom:32px}
+.home #catalog-eyebrow{color:#287f82}
+.home #collection-title{max-width:100%;line-height:1.15}
+.home #catalog-intro{font-family:var(--display);font-size:15px;line-height:1.8;color:#555;max-width:780px;margin-top:18px}
+.home #colecao .catalog-toolbar{display:flex;flex-direction:row;align-items:flex-start;flex-wrap:nowrap;gap:21px;padding-bottom:25px}
+.home #catalog-type-filters{display:flex;align-items:center;justify-content:flex-start;flex-wrap:wrap;gap:8px;flex:1 1 auto;min-width:0;margin:0;padding:0;overflow:visible}
+.home #catalog-type-filters .catalog-type-button{min-height:39px;padding:10px 14px;border:1px solid rgba(24,167,173,.22);border-radius:999px;background:#fff;color:#222;font-family:var(--sans);font-size:11px;line-height:1.4;white-space:nowrap;transition:background .2s,border-color .2s}
+.home #catalog-type-filters .catalog-type-button:hover{background:rgba(209,235,231,.22);border-color:rgba(24,167,173,.4)}
+.home #catalog-type-filters .catalog-type-button.active{background:rgba(209,235,231,.65);border-color:rgba(24,167,173,.3);color:#000}
+.home #colecao .catalog-toolbar .catalog-search-form{width:260px;flex:0 0 260px;min-height:42px;align-self:flex-start;margin:0}
+@media(max-width:1050px){.home #colecao .catalog-toolbar{flex-direction:column;align-items:stretch;gap:17px}.home #catalog-type-filters{width:100%}.home #colecao .catalog-toolbar .catalog-search-form{width:100%;max-width:none;flex-basis:auto;align-self:stretch}.home .catalog-groups{margin-bottom:27px}}
+@media(max-width:640px){.home .catalog-groups{gap:8px;margin-bottom:26px}.home .catalog-groups button{font-size:11px;min-height:42px;padding:10px 15px}.home #colecao .section-heading{margin-bottom:26px}.home #catalog-intro{font-size:14px;line-height:1.8;margin-top:17px}.home #catalog-type-filters{gap:7px}.home #catalog-type-filters .catalog-type-button{font-size:10px;min-height:39px;padding:9px 12px}.home #colecao .catalog-toolbar{padding-bottom:20px;gap:16px}}
