@@ -1,0 +1,53 @@
+.DS_Store
+Thumbs.db
+Desktop.ini
+
+# Dependências, serviços locais e arquivos temporários.
+.netlify/
+node_modules/
+.cache/
+cache/
+logs/
+__pycache__/
+.pytest_cache/
+*.log
+*.tmp
+*.temp
+*.bak
+*.py[cod]
+
+# Ferramentas e material privado ficam fora do site publicado.
+ATUALIZAR-FEIRAS.html
+manutencao/
+historico/
+ferramentas-manu/
+work/
+private/
+privado/
+
+# Segredos e credenciais nunca são publicados.
+.env*
+.ssh/
+.aws/
+.git-credentials
+*credentials*
+*credenciais*
+secrets/
+.secrets
+secrets.*
+token.txt
+token.json
+tokens.json
+id_rsa*
+id_ed25519*
+*.pem
+*.key
+*.pfx
+*.p12
+*.jks
+*.keystore
+
+# Documentos de referência e arquivos de versões anteriores.
+*.[zZ][iI][pP]
+*.[dD][oO][cC][xX]
+*.[pP][pP][tT][xX]

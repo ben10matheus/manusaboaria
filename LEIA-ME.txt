@@ -1,52 +1,236 @@
-MANU SABOARIA — PACOTE PARA GITHUB
+MANU SABOARIA — SITE PRONTO PARA PUBLICAR
+Preparado em 15/10/2026. Atualizado em 17/10/2026 com os ajustes do documento.
 
-Esta pasta contém o site completo, com todas as imagens.
-Abra index.html para visualizar.
+Esta pasta contém o site completo: 26 itens de catálogo, 32 imagens de destaque,
+galeria com TODAS as 137 imagens do arquivo, sacola e pedidos pelo WhatsApp.
+Tamanho aproximado: 33,1 MB. Três itens têm valor sob consulta.
 
-Para o GitHub, envie O CONTEÚDO desta pasta para a raiz do repositório.
-index.html, assets e netlify.toml devem ficar juntos na raiz.
+PASTA PRINCIPAL NA ÁREA DE TRABALHO
 
-Pelo navegador, o GitHub aceita até 100 arquivos por envio.
-O passo a passo para enviar em lotes está no README.md.
-Também é possível enviar tudo com Git ou GitHub Desktop.
+O projeto fica em uma única pasta da Área de Trabalho: "Manu Saboaria".
+Dentro dela, "site" contém o site completo atual, com index.html e assets.
+"historico" guarda as pastas e os ZIPs de versões anteriores, apenas para arquivo.
 
-Para o Netlify: diretório de publicação '.', sem comando de build.
-Não é necessário instalar nada para o site funcionar.
+Use sempre "Manu Saboaria\site" para abrir, revisar, manter e publicar o site.
+Caminho completo da versão atual:
+C:\Users\matheus.c\OneDrive - VIBAZ\Área de Trabalho\Manu Saboaria\site
 
-Esta é a cópia para publicação. A pasta principal de manutenção continua
-sendo Manu Saboaria\site na Área de Trabalho.
+As próximas alterações devem ser aplicadas nessa mesma pasta site, substituindo
+somente os arquivos necessários e preservando os demais arquivos e subpastas.
+Não crie nem use pacotes parciais como uma versão independente do site.
+Não publique a pasta historico nem a pasta de projeto Manu Saboaria inteira.
 
-COLEÇÕES ESPECIAIS E CONTATO
+1. ABRIR NO COMPUTADOR
 
-Tempo de Flores — Edição de Primavera: nove fotos na pasta
-assets/eventos-especiais/primavera-2026, com capa.jpg e especial1.jpg
-até especial8.jpg. Legendas e pasta ativa em assets/eventos-especiais/config.js.
-As instruções ficam em assets/eventos-especiais/COMO-ATUALIZAR.txt.
-Fale conosco reúne WhatsApp, Instagram e dúvidas em fale-conosco.html.
+Na Área de Trabalho, abra "Manu Saboaria", entre em "site" e dê dois cliques
+em index.html. O site abre no navegador e
+funciona sem instalar programas, usar terminal ou executar um comando de build.
+Mantenha index.html e a pasta assets juntos, na estrutura original.
+Confira a página a partir dessa pasta completa após cada alteração.
 
-ABERTURA INSPIRADA NO CANVA
+No celular e no computador, o cliente pode escolher produtos, ajustar as
+quantidades e montar a sacola. O botão de pedido abre o WhatsApp com o resumo.
+É necessário enviar a mensagem e combinar os detalhes com o Manu para confirmar
+o pedido. O site não processa pagamentos nem reserva estoque automaticamente.
 
-A abertura tem texto e botão funcionais em HTML/CSS e a foto real do Manu.
-O estilo fica em assets/css/canva.css; o banner usa a nova versão enviada,
-assets/images/manu-banner.png. A foto anterior, assets/images/manu-na-feira.png,
-permanece nas seções Nossa História e Onde encontrar.
+Contato configurado: Manu Saboaria, +55 (41) 99986-3000.
+Número usado nos links: 5541999863000, conferido também nos rótulos das fotos.
 
-AJUSTES DO DOCUMENTO DE 17/10/2026
+2. PUBLICAR PELO GITHUB + NETLIFY
 
-Menu: Início, Produtos, Presentes, Coleções Especiais, Nossa História e
-Onde encontrar, com Fale conosco ao lado e busca de produtos no cabeçalho.
-No celular, a busca fica dentro do menu. Em outra página, ela leva o termo
-à página pesquisa.html?q=TERMO, com todos os correspondentes e parecidos.
+a) Crie um repositório no GitHub para este site.
+b) Envie o CONTEÚDO da pasta "Manu Saboaria\site" para a raiz do repositório.
+   Abra site, selecione os arquivos e a pasta assets e faça o upload.
+   O arquivo index.html deve aparecer logo na raiz do repositório, junto de
+   assets e netlify.toml. Não deixe tudo dentro de outra pasta site.
+   Inclua também os demais arquivos entregues, como 404.html e robots.txt.
+   A pasta historico fica fora do site e não deve ser enviada ao GitHub.
+c) No Netlify, entre na sua conta e abra Projects. Em Add new project,
+   escolha Import an existing project e selecione GitHub.
+d) Autorize a conexão com o repositório desejado e selecione esse repositório.
+e) Confira as configurações deste projeto:
+      Base directory: deixe vazio.
+      Build command: deixe vazio.
+      Publish directory: .
+   O ponto significa a raiz do repositório. O netlify.toml já define esse
+   diretório. Este site não precisa de npm, dependências ou etapa de build.
+f) Confirme a publicação no botão final exibido pelo Netlify (Publish ou
+   Deploy site). Aguarde o deploy concluir e abra o endereço netlify.app.
 
-As artes dos cartões vieram do DOCX e ficam preservadas integralmente em
-assets/images/categorias-ajustes.png. As fotos são exibidas por CSS; os títulos
-e as setas diagonais dos cartões são elementos editáveis do site.
-Para Você reúne sabonetes e banho/cuidado; Para Casa e Para Presentear
-usam os respectivos filtros. A foto real do Manu foi mantida.
+Depois da conexão com o GitHub, novos commits na branch publicada atualizam o
+site pelo Netlify. Para alterar nome do projeto ou usar um domínio próprio,
+utilize as configurações do projeto no painel do Netlify.
 
-Estilos: assets/css/ajustes.css e assets/css/categorias.css.
-Busca: assets/js/site-search.js, integrada ao catálogo em assets/js/app.js.
-O DOCX de referência não faz parte do pacote de publicação.
+3. ALTERNATIVA: PUBLICAR A PASTA DIRETAMENTE
+
+Entre no Netlify. Em Projects > Add new project > Deploy manually, arraste a
+pasta "site" que fica dentro de "Manu Saboaria" para a área de envio.
+Ela contém index.html e assets. Envie somente site, sem incluir historico
+nem arrastar a pasta de projeto Manu Saboaria inteira.
+Também é possível acessar https://app.netlify.com/drop.
+
+Esta pasta já contém os arquivos finais. Para atualizar um site publicado
+manualmente, faça as alterações locais e envie novamente a pasta atualizada
+pela área de envio da página Deploys do projeto.
+
+4. ATUALIZAR PRODUTOS, PREÇOS E WHATSAPP
+
+O catálogo está em assets/js/products.js. Abra esse arquivo em um editor de
+texto ou código. Cada produto tem nome, preço, imagem, descrição e tamanho.
+
+Exemplos de preço no arquivo:
+   price:15      corresponde a R$ 15,00
+   price:59.90   corresponde a R$ 59,90
+   price:null    exibe o produto como valor sob consulta
+
+Use ponto para os centavos, sem o símbolo R$ e sem vírgula. Preserve as aspas,
+vírgulas e chaves da estrutura. Salve, recarregue o site e confira o resultado.
+O campo phone no início do mesmo arquivo define o WhatsApp da sacola. Os links de contato fixos em index.html, galeria.html, app.js e gallery.js também devem ser atualizados se o número mudar.
+Use o número completo, somente dígitos: país + DDD + número.
+
+5. IMAGENS E APARÊNCIA
+
+As fotos de destaque ficam em assets/images. A galeria completa está em galeria.html e reúne as 137 imagens convertidas do arquivo enviado. Todas ficam em assets/galeria, em WebP, sem depender do Google Fotos. A lista e os títulos da galeria estão em assets/js/gallery-data.js; o comportamento está em assets/js/gallery.js. Os 115 vídeos do arquivo original não foram incorporados, pois a galeria reúne as imagens. Para substituir uma imagem, mantenha o mesmo
+nome e formato ou atualize o campo image do produto correspondente em
+assets/js/products.js. Use fotos otimizadas para carregar rapidamente.
+
+As cores, fontes, espaçamentos e regras de adaptação ao celular ficam em
+assets/css/styles.css, assets/css/marca.css e assets/css/acolhimento.css.
+A ordem dessas folhas de estilo define o acabamento final do site.
+As fontes locais ficam em assets/fonts e são carregadas por assets/css/fonts.css.
+Os textos das seções estão em index.html. O arquivo assets/js/app.js controla
+filtros, busca, detalhes, sacola e WhatsApp.
+
+6. ORIGEM DOS VALORES E CONFERÊNCIA ANTES DE PUBLICAR
+
+Os preços foram transcritos dos textos do álbum compartilhado da marca Manu Saboaria,
+consultado em 15/10/2026:
+https://photos.google.com/share/AF1QipODkdcVihkDzrzG7Sak-wSrPawpe5HSgx7-LkT7QnZZrhd_X-5FS2MaYgJdA1LXWQ?pli=1&key=WUlIZm56YjgzbUwxektvY2tRUTZmZGE5NlA2VkVB
+
+As imagens foram preparadas a partir do arquivo fornecido. Sabonete líquido,
+creme de mãos e presente personalizado estão sob consulta. Mantenha preços e
+disponibilidade atualizados e confirme fragrâncias, estoque, entrega e pagamento
+com o cliente pelo WhatsApp.
+
+Após publicar, confira no celular: carregamento das fotos, busca, filtros,
+detalhes dos produtos, quantidades na sacola e o número aberto no WhatsApp.
+Verifique que o resumo contém os produtos e valores esperados antes de enviar.
+
+7. DOCUMENTAÇÃO OFICIAL
+
+Sequência de publicação conferida na documentação oficial em 15/10/2026:
+https://docs.netlify.com/manage/projects/add-new-project/
+https://docs.netlify.com/start/quickstarts/deploy-from-repository/
+https://docs.netlify.com/start/quickstarts/netlify-drop-quickstart/
+https://docs.netlify.com/build/configure-builds/overview/
+
+Os nomes de alguns botões podem variar conforme o idioma do painel.
+
+
+8. IDENTIDADE DA MARCA E COLEÇÕES ESPECIAIS
+
+O site usa o logotipo oficial sem fundo enviado em PNG, preservado integralmente,
+com as cores #18A7AD, #F0839C e #D1EBE7 e os neutros preto e branco.
+As fontes locais Cardo, Belleza e Arimo ficam em assets/fonts.
+Os ajustes da marca ficam em assets/css/marca.css e assets/css/fonts.css.
+
+A aba Coleções especiais continua no arquivo eventos-especiais.html.
+A coleção atual é Tempo de Flores — Edição de Primavera, com nove fotos em:
+assets/eventos-especiais/primavera-2026/
+
+   capa.jpg       imagem principal da composição completa
+   especial1.jpg até especial8.jpg   oito imagens complementares
+
+Para trocar uma foto, substitua o JPG com o mesmo nome nessa pasta.
+Os títulos, descrições acessíveis e mensagem de contato ficam em:
+assets/eventos-especiais/config.js
+O campo basePath aponta para a pasta da edição atual. As cinco fotos antigas
+na raiz de assets/eventos-especiais foram preservadas.
+O arquivo assets/eventos-especiais/COMO-ATUALIZAR.txt explica a manutenção.
+Confira a página na pasta completa antes de publicar.
+
+FALE CONOSCO
+A página fale-conosco.html reúne WhatsApp, Instagram e as dúvidas frequentes
+abaixo dos canais. O menu usa, nesta ordem: Início, Produtos, Presentes,
+Coleções Especiais, Nossa História e Onde encontrar. Fale conosco continua
+em um botão separado no cabeçalho e também aparece no menu do celular.
+A Galeria continua acessível pelo catálogo e pelos rodapés.
+
+9. ABERTURA CONFORME A REFERÊNCIA DO CANVA
+
+A abertura usa fundo creme quente, formas suaves em verde e rosa,
+o título Sabonetes, velas e aromas, o complemento "para você, para a casa e
+para presentear." e o botão "Conheça os nossos produtos.".
+Texto, elementos decorativos e botão são HTML/CSS e se adaptam à tela.
+O acabamento desta abertura fica em assets/css/canva.css.
+
+A fotografia original do Manu fica em assets/images/manu-na-feira.png.
+Ela aparece na abertura, na seção Nossa História, sobre o Manu, e na página
+Onde encontrar.
+O arquivo original foi preservado sem alterações de pixels ou de rosto.
+As fotografias anteriores continuam guardadas nas respectivas pastas.
+O catálogo, os preços, a galeria e as coleções especiais foram mantidos.
+
+10. ROTINA PARA AS PRÓXIMAS ATUALIZAÇÕES
+
+1) Na Área de Trabalho, abra "Manu Saboaria" e entre na pasta completa "site".
+2) Faça as alterações nessa mesma pasta, somente nos arquivos necessários.
+   Preserve os nomes, os caminhos e todos os arquivos que não precisam mudar.
+3) Abra index.html nessa pasta e confira também a galeria e os eventos.
+4) Para um repositório já publicado, envie apenas os arquivos novos ou alterados
+   aos mesmos caminhos no GitHub. Os arquivos da raiz continuam na raiz e os
+   arquivos de assets continuam nas respectivas subpastas de assets.
+   Mantenha historico fora de todos os envios ao GitHub e ao Netlify.
+5) Faça o commit e aguarde o deploy do Netlify. Confira o endereço publicado.
+
+Uma seleção de arquivos alterados serve apenas para atualizar o repositório.
+Ela não é um site completo nem uma pasta de prévia. Não gere novas pastas
+independentes contendo somente parte do site: mantenha a versão completa
+atualizada no mesmo lugar, com todas as imagens, fontes, páginas e scripts.
+
+Se a publicação for manual, use somente a pasta site completa atualizada,
+conforme a seção 3. Essa mesma pasta deve continuar pronta para abrir
+index.html no computador sem depender de arquivos de outra pasta.
+
+
+11. AJUSTES DO DOCUMENTO AJUSTES 1
+
+Os textos e a ordem do menu seguem os pedidos escritos no documento,
+mesmo quando as imagens de referência mostram nomes anteriores.
+O acabamento do cabeçalho, da busca e das setas fica em assets/css/ajustes.css.
+
+A busca do cabeçalho funciona pelo botão da lupa ou pela tecla Enter.
+No celular, abra o menu para acessar o campo. Na home, o resultado aparece
+no catálogo; em outra página, a busca abre index.html?q=TERMO#colecao.
+O parâmetro q leva o termo ao catálogo. assets/js/site-search.js conecta os
+campos do cabeçalho à busca existente em assets/js/app.js.
+
+Depois do banner, a seção de categorias usa o título "Formas de levar mais
+bem-estar para o seu dia." e o subtítulo "Descubra o que combina com você,
+com a sua casa ou com alguém especial.".
+Os três cards são Para Você, Para Casa e Para Presentear e abrem os filtros
+correspondentes do catálogo. Para Você reúne sabonetes e produtos de banho.
+
+O estilo dos cards fica em assets/css/categorias.css. A arte original da
+imagem 3 do documento está em assets/images/categorias-ajustes.png, sem
+alteração de pixels, usada como fundo por CSS. Os rótulos e as setas são
+elementos do site, mantendo os textos editáveis e os links funcionais.
+Preserve também a fotografia real do Manu e todos os demais arquivos do site.
+O DOCX de referência e as ferramentas de edição não fazem parte da publicação.
+
+Para publicar pelos lotes já preparados, use a pasta Manu Saboaria - GitHub:
+SITE-COMPLETO guarda a cópia completa; LOTE-1, LOTE-2 e LOTE-3 preservam os
+caminhos originais e têm menos de 100 arquivos cada. Entre em cada lote e
+envie seu CONTEÚDO para a raiz do repositório, fazendo um commit entre envios.
+Nenhum lote isolado é um site completo ou uma pasta de prévia.
+ATUALIZAR-AGORA contém somente os arquivos a substituir no site já publicado.
+O editor privado ATUALIZAR-FEIRAS.html fica fora de todos esses envios.
+
+
+A imagem atual do banner inicial fica em assets/images/manu-banner.png.
+A foto das seções Nossa História e Onde encontrar continua em
+assets/images/manu-na-feira.png. Ambos os arquivos foram preservados
+conforme enviados, sem alteração de pixels.
 
 PESQUISA DE PRODUTOS — 18/10/2026
 

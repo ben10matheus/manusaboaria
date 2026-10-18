@@ -4,6 +4,14 @@ Site da marca Manu Saboaria com catálogo, sacola, pedidos pelo WhatsApp, galeri
 
 Este pacote contém o site inteiro, incluindo fotos, logo e fontes locais. Não depende do Google Fotos para exibir as imagens.
 
+## Atualizar com Git
+
+O projeto local em **Manu Saboaria/site** está conectado a `https://github.com/ben10matheus/manusaboaria.git`, na branch `main`.
+
+Na pasta principal **Manu Saboaria**, dê dois cliques em **PUBLICAR-NO-GITHUB.cmd**. O publicador verifica os arquivos, pede uma mensagem para o commit e envia as alterações pelo Git. Se o GitHub tiver alterações que ainda não foram conciliadas, ele para para evitar sobrescrevê-las. Não usa envio forçado.
+
+O publicador e o editor de feiras ficam fora do diretório publicado. A autenticação é gerenciada pelo Git Credential Manager do Windows; nenhuma senha ou token faz parte dos arquivos do site. Os lotes abaixo ficam como alternativa de envio manual.
+
 ## Enviar ao GitHub
 
 Envie o **conteúdo desta pasta** para a raiz do repositório. O `index.html`, a pasta `assets` e o `netlify.toml` devem aparecer diretamente na raiz, sem outra pasta envolvendo o site.
