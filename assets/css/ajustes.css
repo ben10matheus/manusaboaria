@@ -1,0 +1,26 @@
+/* Ajustes solicitados no documento: navegação, busca e seta única dos links. */
+.cozy-header .header-inner.container{gap:14px;padding-inline:20px}
+.cozy-header .brand{width:86px;flex-shrink:0}
+.cozy-header .desktop-nav{gap:16px;flex-shrink:0}
+.cozy-header .desktop-nav a,.contact-page .cozy-header .desktop-nav a,.locations-page .cozy-header .desktop-nav a{font-size:12px;white-space:nowrap}
+.cozy-header .header-actions{gap:12px}
+.cozy-header .contact-link{font-size:10px;padding-inline:12px;gap:8px}
+.header-search{display:flex;align-items:center;gap:9px;border:1px solid rgba(24,167,173,.25);background:#fff;border-radius:999px;min-height:40px;padding:0 12px}
+.header-search-desktop{width:186px;min-width:145px;flex:0 1 186px;margin-left:auto}
+.header-search input{min-width:0;width:100%;border:0;outline:0;background:transparent;font-family:var(--sans);font-size:10px;line-height:1.5;color:#303030;padding:10px 0}
+.header-search input::placeholder{color:#6b7375;opacity:1}
+.header-search button{display:grid;place-items:center;flex-shrink:0;width:22px;height:26px;padding:2px;border:0;background:transparent;color:#666;border-radius:50%}
+.header-search button svg{width:17px;height:17px;stroke-width:1.5}
+.header-search:focus-within{outline:2px solid #287f82;outline-offset:3px}
+.header-search button:focus-visible{outline:2px solid #287f82;outline-offset:2px}
+.header-search-mobile{width:100%;margin:4px 0 15px;min-height:44px}
+.header-search-mobile input{font-size:13px;padding-block:12px}
+.site-arrow{display:inline-block;width:18px;height:18px;flex-shrink:0;fill:none;stroke:currentColor;stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;vertical-align:middle}
+.footer a .site-arrow{width:13px;height:13px;margin-left:4px}
+.cozy-header .contact-link .site-arrow{width:15px;height:15px}
+.event-photo-zoom .site-arrow{width:13px;height:13px;margin-left:5px}
+.canva-hero-copy .canva-hero-description{max-width:535px}
+@media(min-width:1181px) and (max-width:1290px){.cozy-header .header-inner.container{gap:11px;padding-inline:15px}.cozy-header .desktop-nav{gap:16px}.cozy-header .desktop-nav a,.contact-page .cozy-header .desktop-nav a,.locations-page .cozy-header .desktop-nav a{font-size:12px}.cozy-header .brand{width:73px}.cozy-header .brand-official{width:79px;height:79px}.header-search-desktop{width:180px;min-width:135px;flex-basis:180px}.cozy-header .contact-link{font-size:10px;padding-inline:10px}.cozy-header .header-actions{gap:10px}}
+@media(max-width:1180px){.cozy-header .desktop-nav{display:none}.header-search-desktop{width:min(310px,40vw);max-width:310px;flex:1 1 220px}.cozy-header .brand{width:86px}.cozy-header .header-actions{gap:17px}.cozy-header .contact-link{font-size:11px;padding-inline:15px}.header-search input{font-size:12px}}
+@media(max-width:640px){.header-search-desktop{display:none}.cozy-header .header-inner.container{padding-inline:13px;gap:12px}.cozy-header .brand{width:86px}.cozy-header .header-actions{gap:15px}.cozy-header .contact-link{display:none}.header-search-mobile input{font-size:13px}.header-search-mobile button{width:25px;height:29px}}
+@media(max-width:640px){.home .canva-hero-copy .button{font-size:11px;letter-spacing:.2px;padding-inline:18px;gap:11px;white-space:nowrap}}

@@ -54,6 +54,20 @@ Os pedidos são montados na sacola e enviados ao WhatsApp do Manu. A confirmaç�
 
 A abertura foi recriada com texto e botão funcionais em HTML, fundo creme e formas suaves. O acabamento fica em `assets/css/canva.css`. A fotografia original do Manu, em `assets/images/manu-na-feira.png`, também aparece em **O Manu** e **Onde encontrar**. Os arquivos de fotos anteriores foram preservados.
 
+## Ajustes do documento de 17 de outubro
+
+O menu segue a ordem Início, Produtos, Presentes, Coleções Especiais, Nossa História e Onde nos Encontrar, mantendo Fale conosco. A busca do cabeçalho funciona no catálogo e, nas outras páginas, leva a consulta à home. No celular, o campo está no menu.
+
+Os três cartões usam as fotos extraídas do DOCX, preservadas em `assets/images/categorias-ajustes.png`, com títulos editáveis e a mesma seta diagonal dos demais links. Para Você filtra sabonetes e banho/cuidado; Para Casa e Para Presentear mantêm os filtros correspondentes. Os estilos ficam em `assets/css/categorias.css` e `assets/css/ajustes.css`; a busca é integrada por `assets/js/site-search.js`. O documento de referência e o editor privado ficam fora da publicação.
+
+A foto atual do banner fica em `assets/images/manu-banner.png`. A foto anterior, em `assets/images/manu-na-feira.png`, permanece em Nossa História e Onde nos Encontrar.
+
+## Pesquisa de produtos
+
+A busca oferece até três prévias enquanto você digita, com foto e preço. Quando houver mais correspondentes, **Mostrar mais** abre todos os resultados. O botão de pesquisa e Enter levam a `pesquisa.html?q=TERMO`, com todos os correspondentes e **Parecidos com sua pesquisa** abaixo. Os dois grupos usam os mesmos detalhes de produto e sacola do catálogo.
+
+As sugestões estão disponíveis no cabeçalho, no menu móvel, na busca do catálogo e na própria página de resultados. A lógica compartilhada fica em `assets/js/search-engine.js`, com acentos, plurais, prefixos e sugestões próximas. Os produtos continuam sendo mantidos em `assets/js/products.js`.
+
 ## Como nos encontrar e agenda de feiras
 
 A página `como-nos-encontrar.html` mostra os locais fixos e as feiras temporárias, com links para o Google Maps. A agenda considera o dia em Curitiba: feiras futuras aparecem como próximas, as atuais ficam em andamento e as encerradas ficam no histórico recolhido.

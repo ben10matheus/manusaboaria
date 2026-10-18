@@ -27,8 +27,41 @@ Fale conosco reúne WhatsApp, Instagram e dúvidas em fale-conosco.html.
 ABERTURA INSPIRADA NO CANVA
 
 A abertura tem texto e botão funcionais em HTML/CSS e a foto real do Manu.
-O estilo fica em assets/css/canva.css; a foto original fica em
-assets/images/manu-na-feira.png, também usada em O Manu e Onde encontrar.
+O estilo fica em assets/css/canva.css; o banner usa a nova versão enviada,
+assets/images/manu-banner.png. A foto anterior, assets/images/manu-na-feira.png,
+permanece nas seções Nossa História e Onde nos Encontrar.
+
+AJUSTES DO DOCUMENTO DE 17/10/2026
+
+Menu: Início, Produtos, Presentes, Coleções Especiais, Nossa História e
+Onde nos Encontrar, com Fale conosco ao lado e busca de produtos no cabeçalho.
+No celular, a busca fica dentro do menu. Em outra página, ela leva o termo
+à página pesquisa.html?q=TERMO, com todos os correspondentes e parecidos.
+
+As artes dos cartões vieram do DOCX e ficam preservadas integralmente em
+assets/images/categorias-ajustes.png. As fotos são exibidas por CSS; os títulos
+e as setas diagonais dos cartões são elementos editáveis do site.
+Para Você reúne sabonetes e banho/cuidado; Para Casa e Para Presentear
+usam os respectivos filtros. A foto real do Manu foi mantida.
+
+Estilos: assets/css/ajustes.css e assets/css/categorias.css.
+Busca: assets/js/site-search.js, integrada ao catálogo em assets/js/app.js.
+O DOCX de referência não faz parte do pacote de publicação.
+
+PESQUISA DE PRODUTOS — 18/10/2026
+
+Ao digitar, a busca mostra até três produtos com foto, nome e preço.
+Quando há mais correspondentes, Mostrar mais abre a lista completa.
+Pesquisar ou pressionar Enter abre pesquisa.html?q=TERMO com todos os
+correspondentes, sem limite de 12, e Parecidos com sua pesquisa abaixo.
+Os dois grupos permitem abrir os detalhes e adicionar itens à sacola.
+As sugestões funcionam no cabeçalho, no menu móvel e na busca do catálogo.
+
+O catálogo continua em assets/js/products.js. A lógica compartilhada fica
+em assets/js/search-engine.js; sugestões em assets/js/site-search.js e
+assets/css/search.css. A página usa assets/css/search-page.css e app.js.
+A busca ignora acentos, reconhece plurais e sugere termos próximos, sem
+repetir os correspondentes no grupo de parecidos.
 
 COMO NOS ENCONTRAR — AGENDA
 

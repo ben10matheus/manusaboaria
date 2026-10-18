@@ -63,7 +63,18 @@
     }
 
     function externalLink(className, label, href) {
-      const link = element('a', className, label);
+      const hasArrow = /\s*↗$/.test(label);
+      const link = element('a', className, hasArrow ? label.replace(/\s*↗$/, '') : label);
+      if (hasArrow) {
+        const arrow = document.createElementNS('http://www.w3.org/2000/svg', 'svg');
+        arrow.setAttribute('class', 'site-arrow');
+        arrow.setAttribute('viewBox', '0 0 24 24');
+        arrow.setAttribute('aria-hidden', 'true');
+        const path = document.createElementNS('http://www.w3.org/2000/svg', 'path');
+        path.setAttribute('d', 'M7 17 17 7M7 7h10v10');
+        arrow.append(path);
+        link.append(arrow);
+      }
       link.href = href;
       link.target = '_blank';
       link.rel = 'noopener noreferrer';

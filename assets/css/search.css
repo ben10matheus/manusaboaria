@@ -1,0 +1,22 @@
+/* Autocomplete: painel independente do tamanho dos campos e do menu móvel. */
+.site-autocomplete{position:fixed;z-index:1000;width:380px;max-width:calc(100vw - 32px);max-height:360px;overflow:auto;overscroll-behavior:contain;padding:9px;background:#fffdf9;color:#222;border:1px solid rgba(24,167,173,.24);border-radius:17px;box-shadow:0 15px 42px rgba(0,0,0,.13);text-align:left;font-family:var(--sans,'Arimo',Arial,sans-serif);line-height:1.5;isolation:isolate}
+.site-autocomplete[hidden]{display:none!important}
+.site-autocomplete-heading{margin:0;padding:7px 10px 9px;font-family:var(--display,'Belleza',Arial,sans-serif);font-size:10px;font-weight:400;line-height:1.5;letter-spacing:.8px;color:#69716d}
+.site-autocomplete-list{list-style:none;margin:0;padding:0;display:grid;gap:2px}
+.site-autocomplete-item{list-style:none;margin:0;padding:0}
+.site-autocomplete .site-autocomplete-result{display:flex;align-items:center;gap:12px;min-height:65px;margin:0;padding:8px 9px;border:0;border-radius:11px;background:transparent;color:#222;text-align:left;text-decoration:none;font-size:13px;font-weight:400;line-height:1.4;transition:background .15s}
+.site-autocomplete .site-autocomplete-result:hover,.site-autocomplete .site-autocomplete-result:focus-visible{background:rgba(209,235,231,.43)}
+.site-autocomplete .site-autocomplete-result:focus-visible,.site-autocomplete .site-autocomplete-more:focus-visible{outline:2px solid #287f82;outline-offset:-2px}
+.site-autocomplete .site-autocomplete-thumb{display:block;width:48px;height:48px;max-width:none;flex:0 0 48px;border-radius:9px;object-fit:cover;background:#f2efea}
+.site-autocomplete .site-autocomplete-placeholder{display:grid;place-items:center;color:#555;font-family:var(--serif,'Cardo',Georgia,serif);font-size:12px;background:rgba(240,131,156,.13)}
+.site-autocomplete-product{display:flex;flex-direction:column;gap:5px;min-width:0}
+.site-autocomplete-name{display:block;font-family:var(--sans,'Arimo',Arial,sans-serif);font-size:12px;line-height:1.4;font-weight:400;overflow-wrap:anywhere}
+.site-autocomplete-price{display:block;font-size:10px;line-height:1.4;color:#5d665f;font-variant-numeric:tabular-nums}
+.site-autocomplete .site-autocomplete-more{display:block;margin:7px 0 0;padding:11px 10px;border-top:1px solid rgba(24,167,173,.15);border-radius:0 0 9px 9px;color:#285c5b;text-decoration:none;font-size:11px;font-weight:500;line-height:1.6;text-align:center;overflow-wrap:anywhere}
+.site-autocomplete .site-autocomplete-more:hover{background:rgba(240,131,156,.12);color:#111}
+.site-autocomplete-empty{margin:0;padding:6px 10px 12px;color:#626861;font-size:12px;line-height:1.75;overflow-wrap:anywhere}
+.catalog-search-form{width:260px;flex-shrink:0;min-height:44px}
+.catalog-search-form input{font-size:12px}
+@media(max-width:720px){.catalog-search-form{width:100%}}
+@media(max-width:640px){.site-autocomplete{border-radius:15px;padding:8px;box-shadow:0 12px 30px rgba(0,0,0,.12)}.site-autocomplete-heading{font-size:10px;padding-inline:9px}.site-autocomplete .site-autocomplete-result{gap:11px;min-height:65px;padding-inline:8px}.site-autocomplete-name{font-size:12px}.site-autocomplete-price{font-size:11px}.site-autocomplete .site-autocomplete-more{font-size:12px;min-height:44px;padding-block:11px}}
+@media(prefers-reduced-motion:reduce){.site-autocomplete .site-autocomplete-result{transition:none}}

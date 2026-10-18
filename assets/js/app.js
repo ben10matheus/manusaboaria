@@ -13,6 +13,8 @@
     const state = { filter: 'all', search: '', sort: 'featured', visible: pageSize, cart: [], notes: '' };
     const $ = id => document.getElementById(id);
     const grid = $('product-grid');
+    const isSearchPage = document.body.classList.contains('search-page');
+    const similarGrid = $('similar-grid');
     const productDialog = $('product-dialog');
     const cartDialog = $('cart-dialog');
     const productContent = $('product-content');
@@ -190,10 +192,12 @@
 
     function filteredProducts() {
       const query = normalized(state.search).trim();
-      const matches = products.filter(product => {
-        const matchesCategory = state.filter === 'all' || state.filter === 'todos' || product.category === state.filter;
-        const haystack = normalized([product.name, product.description, product.detail, product.categoryLabel].join(' '));
-        return matchesCategory && (!query || haystack.includes(query));
+      const candidates = query && window.ManuSearch ? window.ManuSearch.search(products, state.search).matches : (isSearchPage ? [] : products);
+      const matches = candidates.filter(product => {
+        const matchesCategory = state.filter === 'all' || state.filter === 'todos'
+          || (state.filter === 'voce' && (product.category === 'sabonetes' || product.category === 'banho'))
+          || product.category === state.filter;
+        return matchesCategory;
       });
       if (state.sort === 'price-low') matches.sort((a, b) => (isPriced(a) ? a.price : Infinity) - (isPriced(b) ? b.price : Infinity));
       if (state.sort === 'price-high') matches.sort((a, b) => (isPriced(b) ? b.price : -Infinity) - (isPriced(a) ? a.price : -Infinity));
@@ -204,18 +208,60 @@
     function renderCatalog() {
       if (!grid) return;
       const matches = filteredProducts();
-      const shown = matches.slice(0, state.visible);
+      const shown = isSearchPage ? matches : matches.slice(0, state.visible);
       const fragment = document.createDocumentFragment();
       shown.forEach(product => fragment.append(makeCard(product)));
       grid.replaceChildren(fragment);
-      if ($('catalog-count')) $('catalog-count').textContent = matches.length === 0 ? 'Nenhum produto encontrado' : 'Mostrando ' + shown.length + ' de ' + matches.length + ' produtos';
+      if ($('catalog-count')) $('catalog-count').textContent = matches.length === 0 ? 'Nenhum produto encontrado' : 'Mostrando ' + shown.length + ' de ' + matches.length + (matches.length === 1 ? ' produto' : ' produtos');
       if ($('no-results')) $('no-results').hidden = matches.length > 0;
       if ($('load-more')) $('load-more').hidden = shown.length >= matches.length;
+      if (isSearchPage) {
+        const query = state.search.trim();
+        $('search-query').textContent = query ? '“' + query + '”' : 'seu próximo favorito';
+        document.title = (query ? 'Pesquisa: ' + query : 'Pesquisar produtos') + ' · Manu Saboaria';
+        $('catalog-count').textContent = query ? matches.length + (matches.length === 1 ? ' produto encontrado' : ' produtos encontrados') : 'Digite o nome de um produto, aroma ou categoria.';
+        $('search-empty-title').textContent = query ? 'Não encontramos esse produto.' : 'O que você está procurando?';
+        $('search-empty-description').textContent = query ? 'Experimente outra palavra ou confira as opções parecidas abaixo.' : 'Use a busca acima para encontrar os seus favoritos do Manu.';
+        const similar = query && window.ManuSearch ? window.ManuSearch.search(products, query).similar : [];
+        if (similarGrid) similarGrid.replaceChildren(...similar.map(makeCard));
+        $('similar-section').hidden = !query;
+        $('similar-empty').hidden = similar.length > 0;
+      }
       document.querySelectorAll('[data-filter]').forEach(button => {
         const active = button.dataset.filter === state.filter;
         button.classList.toggle('active', active);
         button.setAttribute('aria-pressed', String(active));
       });
+    }
+
+    function scrollToCatalog(instant = false) {
+      const collection = $('colecao');
+      if (!collection) return;
+      const reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+      collection.scrollIntoView({ behavior: instant || reducedMotion ? 'auto' : 'smooth', block: 'start' });
+    }
+
+    function applyCatalogSearch(query, options = {}) {
+      state.search = typeof query === 'string' ? query : '';
+      if (options.resetFilter) state.filter = 'all';
+      state.visible = pageSize;
+      if ($('catalog-search')) $('catalog-search').value = state.search;
+      document.querySelectorAll('[data-site-search] input[name="q"]').forEach(input => {
+        input.value = state.search;
+      });
+      renderCatalog();
+      if (options.updateURL !== false) {
+        try {
+          const url = new URL(window.location.href);
+          if (state.search.trim()) url.searchParams.set('q', state.search.trim());
+          else url.searchParams.delete('q');
+          if (options.scroll) url.hash = 'colecao';
+          window.history.replaceState(null, '', url.href);
+        } catch (_) {
+          // Search still works when local-file history updates are restricted.
+        }
+      }
+      if (options.scroll) scrollToCatalog(Boolean(options.instant));
     }
 
     function quantityButton(action, label, productId) {
@@ -395,14 +441,14 @@
       updateCheckout();
     }
 
-    if (grid) grid.addEventListener('click', event => {
+    [grid, similarGrid].filter(Boolean).forEach(productGrid => productGrid.addEventListener('click', event => {
       const button = event.target.closest('button[data-product-id]');
-      if (!button || !grid.contains(button)) return;
+      if (!button || !productGrid.contains(button)) return;
       const product = productMap.get(button.dataset.productId);
       if (!product) return;
       if (button.dataset.action === 'add') addProduct(product.id);
       else showProduct(product);
-    });
+    }));
 
     document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
       state.filter = button.dataset.filter || 'all';
@@ -415,22 +461,8 @@
       if (!category) return;
       event.preventDefault();
       state.filter = category;
-      state.search = '';
-      state.visible = pageSize;
-      if ($('catalog-search')) $('catalog-search').value = '';
-      renderCatalog();
-      const collection = $('colecao');
-      if (collection) {
-        const reducedMotion = window.matchMedia && window.matchMedia('(prefers-reduced-motion: reduce)').matches;
-        collection.scrollIntoView({ behavior: reducedMotion ? 'auto' : 'smooth', block: 'start' });
-      }
+      applyCatalogSearch('', { scroll: true });
     }));
-
-    if ($('catalog-search')) $('catalog-search').addEventListener('input', event => {
-      state.search = event.target.value;
-      state.visible = pageSize;
-      renderCatalog();
-    });
 
     if ($('catalog-sort')) $('catalog-sort').addEventListener('change', event => {
       state.sort = event.target.value;
@@ -537,8 +569,19 @@
     });
 
     restoreCart();
-    renderCatalog();
+    let initialQuery = null;
+    try {
+      initialQuery = new URLSearchParams(window.location.search).get('q');
+    } catch (_) {
+      // Browsers without a usable query string start with the complete catalogue.
+    }
+    if (grid && initialQuery !== null) applyCatalogSearch(initialQuery, { resetFilter: true, scroll: !isSearchPage, instant: true, updateURL: false });
+    else renderCatalog();
     renderCart();
+    if (isSearchPage) {
+      const productId = new URLSearchParams(window.location.search).get('produto');
+      if (productMap.has(productId)) showProduct(productMap.get(productId));
+    }
   }
 
   if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', init, { once: true });

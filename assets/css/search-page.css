@@ -1,0 +1,34 @@
+/* Página de pesquisa: o mesmo catálogo e a mesma sacola do site. */
+.search-page{background:#fffdfb}
+.search-welcome{padding-top:42px;padding-bottom:42px}
+.search-breadcrumb,.search-breadcrumb-current,.search-breadcrumb-separator{font-size:12px;color:#6e7470}
+.search-breadcrumb{text-decoration:underline;text-underline-offset:3px}
+.search-breadcrumb-separator{margin-inline:9px}
+.search-welcome .eyebrow{margin-top:34px;margin-bottom:18px;color:#287f82}
+.search-welcome h1{font-family:var(--serif);font-size:clamp(36px,4.5vw,64px);font-weight:400;line-height:1.15;max-width:920px;margin:0 0 30px;overflow-wrap:anywhere}
+.search-welcome h1 em{color:#287f82}
+.search-page-form{position:relative;max-width:620px;min-height:56px;border-color:#b8d9d6;background:#fff;padding:5px 6px 5px 22px;gap:14px}
+.search-page-form input{font-size:15px;padding-block:10px}
+.search-page-form>button{width:auto;height:44px;padding:0 21px;border-radius:999px;display:flex;gap:9px;background:#287f82;color:#fff;font:13px var(--sans)}
+.search-page-form>button:hover{background:#216c70}
+.search-page-form>button svg{width:17px;height:17px}
+.search-matches{padding-top:30px;padding-bottom:58px;border-top:1px solid #e8e1d9;scroll-margin-top:140px}
+.search-results-heading{display:flex;justify-content:space-between;align-items:center;gap:25px;margin-bottom:28px}
+.search-results-heading h2,.search-similar h2{font-family:var(--serif);font-size:clamp(24px,2.8vw,35px);font-weight:400;line-height:1.25;margin:0 0 9px}
+.search-results-heading p{font-size:13px;color:#69716c;margin:0}
+.search-sort{display:flex;align-items:center;gap:10px;white-space:nowrap;font-size:12px;color:#69716c}
+.search-sort select{font:12px var(--sans);border:1px solid #d8e1dc;background:#fff;border-radius:25px;padding:10px 12px;color:#333;max-width:185px}
+.search-similar{padding:48px 0 54px;background:linear-gradient(110deg,#f9efec,#eef6f3);border-block:1px solid #f2e8e2}
+.search-similar-heading{margin-bottom:30px;max-width:620px}
+.search-similar-heading .eyebrow{color:#287f82;font-size:10px;margin-bottom:15px}
+.search-similar-heading>p:last-child,.search-similar-empty{font-size:14px;line-height:1.7;color:#69716c}
+.search-similar-empty a{color:#287f82;text-decoration:underline;text-underline-offset:3px}
+.search-empty{text-align:center;padding:34px 20px 45px;background:#faf5f0;border-radius:24px}
+.search-empty>span{font-size:32px;color:#bb6b80}
+.search-empty h3{font-family:var(--serif);font-size:28px;font-weight:400;margin:10px 0}
+.search-empty p{font-size:14px;line-height:1.8;color:#69716c;margin:0 0 22px}
+.search-end{padding-top:30px;padding-bottom:35px}
+.search-end .catalog-note{text-align:left;margin-top:18px}
+.catalog-search-form{width:260px;flex-shrink:0;min-height:44px}
+.catalog-search-form input{font-size:12px}
+@media(max-width:720px){.search-welcome{padding-top:28px;padding-bottom:32px}.search-welcome .eyebrow{font-size:10px;margin-top:28px}.search-results-heading{align-items:flex-start;flex-direction:column;gap:16px}.search-sort{width:100%;justify-content:space-between}.search-matches{padding-top:25px;padding-bottom:35px}.search-similar{padding:35px 0}.search-page-form{padding-left:16px;gap:6px}.search-page-form input{font-size:13px}.search-page-form>button{padding-inline:15px}.catalog-search-form{width:100%}}
