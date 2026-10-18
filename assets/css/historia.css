@@ -1,0 +1,21 @@
+/* Nossa História: leitura mais ampla e fotografias originais. */
+.home #essencia{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:clamp(32px,5vw,72px)}
+.home #essencia .essence-copy>p:not(.eyebrow){max-width:none}
+.home #essencia .story-carousel{min-width:0;padding:14px 14px 0 0;margin:0}
+.home #essencia .story-carousel:before{inset:0 0 61px 18px;background:#f3e9de;border-radius:28px}
+.story-slides{position:relative;aspect-ratio:4/3;border-radius:23px;overflow:hidden;background:#f6f0e9;isolation:isolate}
+.story-slide{position:absolute;inset:0;margin:0;opacity:0;visibility:hidden;transition:opacity .55s ease,visibility .55s;pointer-events:none}
+.story-slide.is-active{opacity:1;visibility:visible;z-index:1}
+.home #essencia .story-slide img{display:block;width:100%;height:100%;max-width:none;aspect-ratio:auto;object-fit:contain;object-position:center;border-radius:0}
+.story-controls{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-top:17px;padding:0 2px}
+.story-navigation{display:flex;align-items:center;gap:9px}
+.story-controls button{display:inline-flex;align-items:center;justify-content:center;gap:6px;min-height:44px;border:1px solid rgba(24,167,173,.25);border-radius:999px;background:#fff;font-family:var(--sans);font-size:11px;color:#333;transition:background .2s}
+.story-controls button:hover{background:#edf7f5}
+.story-controls button:focus-visible{outline:2px solid #287f82;outline-offset:3px}
+.story-navigation button{width:44px;padding:10px}
+.story-controls svg{width:17px;height:17px;stroke-width:1.6}
+.story-toggle{padding:9px 13px}
+.story-count{min-width:39px;text-align:center;font-size:11px;color:#666;font-variant-numeric:tabular-nums;white-space:nowrap}
+@media(max-width:900px){.home #essencia{grid-template-columns:minmax(0,1.1fr) minmax(0,1fr);gap:30px}}
+@media(max-width:740px){.home #essencia{grid-template-columns:minmax(0,1fr);gap:31px}.home #essencia .story-carousel{padding:10px 10px 0 0;margin:0}.home #essencia .story-carousel:before{inset:0 0 60px 14px;border-radius:23px}.story-slides{border-radius:18px}.story-controls{margin-top:14px}}
+@media(prefers-reduced-motion:reduce){.story-slide{transition:none}.story-controls button{transition:none}}

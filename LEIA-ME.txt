@@ -290,6 +290,17 @@ assim como o frete, será confirmada pelo WhatsApp ao enviar o pedido."
 A galeria não é mais exibida. As 137 fotos permanecem em assets/galeria;
 galeria.html redireciona ao catálogo. Preserve esses arquivos.
 
+CARROSSEL DE NOSSA HISTÓRIA — 18/10/2026
+
+A seção tem texto mais amplo, sem o link Acompanhe e sem a assinatura antiga.
+O carrossel reúne 14 fotos: manu-na-feira.png primeiro, preservado também em
+Onde encontrar, e as 13 imagens originais do ZIP em assets/images/nossa-historia.
+Os nomes vão de foto-01.jpg a foto-13.jpg, com foto-09.png no formato original.
+Preserve os bytes e os rostos das fotos, sem retoques ou geração de imagens.
+A troca automática ocorre a cada seis segundos, com pausa e botões anterior
+e próxima. O comportamento fica em assets/js/historia-carousel.js e o estilo
+em assets/css/historia.css. Os quatro parágrafos aprovados foram mantidos.
+
 COMO NOS ENCONTRAR — AGENDA
 
 A página como-nos-encontrar.html reúne os quatro locais fixos, as feiras

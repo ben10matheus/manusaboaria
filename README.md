@@ -84,6 +84,8 @@ O menu **Presentes** abre o grupo **Para Presentear** em `index.html?categoria=p
 
 **Nossa História** usa o título “Uma história feita de cuidado.” e os quatro parágrafos aprovados sobre a origem da marca durante a pandemia, Manoel e Margarete e o trabalho artesanal. A abertura usa “A marca Manu Saboaria” para distinguir a empresa da pessoa.
 
+O texto da história ocupa uma área mais ampla; o link “Acompanhe” e a assinatura foram retirados dessa seção. O carrossel reúne 14 fotos: o retrato original `assets/images/manu-na-feira.png` primeiro e as 13 imagens do ZIP em `assets/images/nossa-historia/`, de `foto-01.jpg` a `foto-13.jpg`, com a exceção `foto-09.png`. Os arquivos e os rostos foram preservados, sem retoques; o retrato original também permanece em Onde encontrar. A troca automática acontece a cada seis segundos, com pausa e controles de foto anterior/próxima. Manutenção em `assets/js/historia-carousel.js` e `assets/css/historia.css`.
+
 Depois dos produtos, a frase é: “A disponibilidade dos produtos e fragrâncias, assim como o frete, será confirmada pelo WhatsApp ao enviar o pedido.” Os preços, as fotos, as fontes e as demais seções foram preservados.
 
 ## Pesquisa de produtos
