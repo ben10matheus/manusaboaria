@@ -1,19 +1,21 @@
 MANU SABOARIA — SITE PRONTO PARA PUBLICAR
-Preparado em 15/10/2026. Atualizado em 18/10/2026 com os três documentos selecionados.
+Preparado em 15/10/2026. Atualizado em 25/10/2026 conforme Ajustes 2.pdf.
 
-Esta pasta contém o site completo: 26 itens de catálogo, 32 imagens de destaque,
+Esta pasta contém o site completo: 26 itens de catálogo, fotos de destaque,
 137 fotos preservadas da antiga galeria, sacola e pedidos pelo WhatsApp.
-Tamanho aproximado: 33,1 MB. Três itens têm valor sob consulta.
+Três itens do catálogo têm valor sob consulta. Hortifruti possui quatro
+consultas próprias na página Coleções Especiais, sem novos valores numéricos.
 
-PASTA PRINCIPAL NA ÁREA DE TRABALHO
+PASTA PRINCIPAL EM C:\manu
 
-O projeto fica em uma única pasta da Área de Trabalho: "Manu Saboaria".
+O projeto principal fica em C:\manu\Manu Saboaria.
+A segunda pasta já existente é C:\manu\Manu Saboaria - GitHub.
 Dentro dela, "site" contém o site completo atual, com index.html e assets.
 "historico" guarda as pastas e os ZIPs de versões anteriores, apenas para arquivo.
 
 Use sempre "Manu Saboaria\site" para abrir, revisar, manter e publicar o site.
 Caminho completo da versão atual:
-C:\Users\matheus.c\OneDrive - VIBAZ\Área de Trabalho\Manu Saboaria\site
+C:\manu\Manu Saboaria\site
 
 As próximas alterações devem ser aplicadas nessa mesma pasta site, substituindo
 somente os arquivos necessários e preservando os demais arquivos e subpastas.
@@ -22,7 +24,7 @@ Não publique a pasta historico nem a pasta de projeto Manu Saboaria inteira.
 
 1. ABRIR NO COMPUTADOR
 
-Na Área de Trabalho, abra "Manu Saboaria", entre em "site" e dê dois cliques
+Em C:\manu, abra "Manu Saboaria", entre em "site" e dê dois cliques
 em index.html. O site abre no navegador e
 funciona sem instalar programas, usar terminal ou executar um comando de build.
 Mantenha index.html e a pasta assets juntos, na estrutura original.
@@ -38,7 +40,9 @@ Número usado nos links: 5541999863000, conferido também nos rótulos das fotos
 
 2. PUBLICAR PELO GITHUB + NETLIFY
 
-a) Crie um repositório no GitHub para este site.
+a) O repositório já configurado é github.com/ben10matheus/manusaboaria.
+   Para atualizar, use PUBLICAR-NO-GITHUB.cmd na pasta principal; os lotes
+   permanecem como alternativa de envio manual. Não envie os helpers privados.
 b) Envie o CONTEÚDO da pasta "Manu Saboaria\site" para a raiz do repositório.
    Abra site, selecione os arquivos e a pasta assets e faça o upload.
    O arquivo index.html deve aparecer logo na raiz do repositório, junto de
@@ -134,40 +138,39 @@ com as cores #18A7AD, #F0839C e #D1EBE7 e os neutros preto e branco.
 As fontes locais Cardo, Belleza e Arimo ficam em assets/fonts.
 Os ajustes da marca ficam em assets/css/marca.css e assets/css/fonts.css.
 
-A aba Coleções especiais continua no arquivo eventos-especiais.html.
-A coleção atual é Tempo de Flores — Edição de Primavera, com nove fotos em:
-assets/eventos-especiais/primavera-2026/
+A aba Coleções Especiais continua no arquivo eventos-especiais.html.
+A coleção de abertura agora é Hortifruti do Manu, com os textos fornecidos
+em Ajustes 2.pdf. Reutiliza fotos reais já preservadas em assets/galeria:
+photo-026.webp no banner e photo-032.webp, photo-037.webp, photo-038.webp,
+photo-080.webp nos quatro cards. Morango, Maracujá, Limão e Frutinhas para
+presentear exibem Valor sob consulta e consultam o Manu pelo WhatsApp.
+As fotos mostram composições. Não foram criados preços ou SKUs no catálogo.
+A estrutura fica no HTML e o acabamento em assets/css/colecoes.css.
 
-   capa.jpg       imagem principal da composição completa
-   especial1.jpg até especial8.jpg   oito imagens complementares
-
-Para trocar uma foto, substitua o JPG com o mesmo nome nessa pasta.
-Os títulos, descrições acessíveis e mensagem de contato ficam em:
-assets/eventos-especiais/config.js
-O campo basePath aponta para a pasta da edição atual. As cinco fotos antigas
-na raiz de assets/eventos-especiais foram preservadas.
-O arquivo assets/eventos-especiais/COMO-ATUALIZAR.txt explica a manutenção.
-Confira a página na pasta completa antes de publicar.
+Tempo de Flores — Edição de Primavera permanece numa seção recolhível abaixo,
+com as nove fotos de assets/eventos-especiais/primavera-2026:
+capa.jpg e especial1.jpg até especial8.jpg. O lightbox foi mantido.
+assets/eventos-especiais/config.js e assets/js/eventos.js configuram somente
+Primavera. As cinco fotos anteriores também foram preservadas.
 
 FALE CONOSCO
-A página fale-conosco.html reúne WhatsApp, Instagram e as dúvidas frequentes
-abaixo dos canais. O menu usa, nesta ordem: Início, Produtos, Presentes,
-Coleções Especiais, Nossa História e Onde encontrar. Fale conosco continua
-em um botão separado no cabeçalho e também aparece no menu do celular.
-Presentes abre o grupo Para Presentear do catálogo. O bloco promocional antigo
-foi retirado. A galeria não aparece mais na interface nem nos rodapés;
-o endereço antigo galeria.html redireciona ao catálogo.
+A página fale-conosco.html reúne WhatsApp, Instagram e as oito dúvidas
+frequentes revisadas. O menu atual segue a página 1 de Ajustes 2.pdf:
+Início, Produtos, Coleções Especiais, Nossa História, Onde Encontrar e
+Últimas Notícias. Fale conosco fica separado e também aparece no menu móvel.
+O grupo Para Presentear continua pelos cartões e filtros do catálogo.
+A galeria não aparece na interface nem nos rodapés; galeria.html redireciona
+ao catálogo. O bloco promocional antigo permanece retirado.
 
 9. ABERTURA CONFORME A REFERÊNCIA DO CANVA
 
 A abertura usa fundo creme quente, formas suaves em verde e rosa,
-o título Sabonetes, velas e aromas, o complemento "para você, a casa e
-para presentear." e o botão "Conheça os nossos produtos.".
+o título Sabonetes, velas e aromas, o complemento "para você, sua casa e para presentear" e o botão "Conheça os nossos produtos".
 Texto, elementos decorativos e botão são HTML/CSS e se adaptam à tela.
 O acabamento desta abertura fica em assets/css/canva.css.
 
 A fotografia original do Manu fica em assets/images/manu-na-feira.png.
-Ela aparece na seção Nossa História, sobre o Manu, e na página Onde encontrar.
+Ela permanece preservada e na página Onde Encontrar; saiu do carrossel.
 A abertura usa a foto enviada para assets/images/manu-banner.png.
 O arquivo original foi preservado sem alterações de pixels ou de rosto.
 As fotografias anteriores continuam guardadas nas respectivas pastas.
@@ -175,7 +178,7 @@ O catálogo, os preços, as fotos preservadas e as coleções especiais foram ma
 
 10. ROTINA PARA AS PRÓXIMAS ATUALIZAÇÕES
 
-1) Na Área de Trabalho, abra "Manu Saboaria" e entre na pasta completa "site".
+1) Em C:\manu, abra "Manu Saboaria" e entre na pasta completa "site".
 2) Faça as alterações nessa mesma pasta, somente nos arquivos necessários.
    Preserve os nomes, os caminhos e todos os arquivos que não precisam mudar.
 3) Abra index.html nessa pasta e confira os grupos do catálogo e as coleções.
@@ -197,8 +200,8 @@ index.html no computador sem depender de arquivos de outra pasta.
 
 11. AJUSTES DO DOCUMENTO AJUSTES 1
 
-Os textos e a ordem do menu seguem os pedidos escritos no documento,
-mesmo quando as imagens de referência mostram nomes anteriores.
+A arte e os componentes desta referência foram preservados; os textos e a
+ordem atual do menu seguem a revisão de 25/10/2026 (Ajustes 2.pdf).
 O acabamento do cabeçalho, da busca e das setas fica em assets/css/ajustes.css.
 
 A busca do cabeçalho funciona pelo botão da lupa ou pela tecla Enter.
@@ -207,9 +210,9 @@ pesquisa.html?q=TERMO, com todos os correspondentes e opções parecidas abaixo.
 O parâmetro q leva o termo à pesquisa. assets/js/site-search.js controla as
 sugestões e usa o motor compartilhado com assets/js/app.js.
 
-Depois do banner, a seção de categorias usa o título "Formas de levar mais
-bem-estar para o seu dia." e o subtítulo "Descubra o que combina com você,
-com a sua casa ou com alguém especial.".
+Depois do banner, a seção de categorias usa "Cuidado para cada momento."
+e "Descubra criações artesanais para transformar pequenos momentos da rotina
+em experiências especiais.".
 Os três cards são Para Você, Para Casa e Para Presentear e abrem os filtros
 correspondentes do catálogo. Para Você reúne sabonetes e produtos de banho.
 
@@ -230,7 +233,7 @@ O editor privado ATUALIZAR-FEIRAS.html fica fora de todos esses envios.
 
 
 A imagem atual do banner inicial fica em assets/images/manu-banner.png.
-A foto das seções Nossa História e Onde encontrar continua em
+A foto preservada e usada em Onde Encontrar continua em
 assets/images/manu-na-feira.png. Ambos os arquivos foram preservados
 conforme enviados, sem alteração de pixels.
 
@@ -254,52 +257,90 @@ FOTO ORIGINAL DO BANNER — 18/10/2026
 O banner usa a foto mais original enviada em 18/10/2026, preservada
 exatamente como recebida em assets/images/manu-banner.png (1536 x 1024).
 O site não aplica retoque no rosto, filtro ou distorção à fotografia.
-O texto foi ajustado para: para você, a casa e para presentear.
+O texto foi ajustado para: para você, sua casa e para presentear
 
-CATÁLOGO, PRESENTES E NOSSA HISTÓRIA — 18/10/2026
+CATÁLOGO ATUAL — AJUSTES 2, 25/10/2026
 
-Os três documentos selecionados foram aplicados ao catálogo, à navegação de
-Presentes, à história aprovada e à retirada da galeria da interface.
-Os grupos e filtros ficam em catalogGroups, dentro de assets/js/app.js:
+Os três grupos e seus filtros ficam em catalogGroups, em assets/js/app.js:
 
-Para Você: Body Splash, Creme Hidratante, Escalda Pés, Espuma de Banho,
-Geleia de Banho, Loção Pós Barba, Sabonetes e Sais de Banho.
-Título: Seu momento de pausa e bem-estar.
+Para Você: Sabonetes, Body Splash, Geleia de Banho, Sais de Banho,
+Espuma de Banho, Escalda Pés, Creme Hidratante e Loção Pós Barba.
+Título: Momento de cuidado e bem-estar.
 
-Para a Casa: Velas, Água Perfumada, Difusores de Ambiente e Incenso.
-Título: Aroma que dá vida ao lar.
+Para Casa: Velas, Água Perfumada, Difusores de Ambiente e Incenso.
+Título: Aromas que acolhem e transformam ambientes.
 
-Para Presentear: Até R$ 39,90, Até R$ 69,90, Até R$ 99,90 e A partir de R$ 99,90.
-Título: Surpreenda com algo especial.
-As ideias de presente usam os produtos existentes. As faixas incluem os
-limites indicados e não incluem produtos com valor sob consulta.
-O menu Presentes abre index.html?categoria=presentes#colecao, no grupo
-Para Presentear. O bloco antigo "Um presente. Um jeito de cuidar." foi retirado.
+Para Presentear: Até R$ 39,90; De R$ 39,91 a R$ 69,90;
+De R$ 69,91 a R$ 99,90; Acima de R$ 99,90.
+Título: Surpreenda com um toque especial.
+As faixas não se sobrepõem e não incluem produtos sob consulta.
+Com o catálogo atual, os totais por faixa são 11, 8, 4 e 0 produtos.
+O grupo abre em index.html?categoria=presentes#colecao pelos cartões/filtros;
+o antigo item Presentes do menu e o bloco promocional foram retirados.
+A ordenação oferece Em destaque, Menor preço, Maior preço e Nome do produto (A-Z).
 
-Body Splash e Loção Pós Barba ainda não têm registros no catálogo. Nenhum
-preço atual atinge R$ 99,90; esses filtros podem mostrar zero resultados.
-Não foram inventados produtos, fotos ou valores para preenchê-los.
+Body Splash e Loção Pós Barba ainda não têm registros no catálogo.
+Não foram inventados produtos, fotos ou valores para preencher filtros.
+A frase após os produtos é: "A disponibilidade dos produtos e das fragrâncias,
+assim como o valor do frete, será confirmada pelo WhatsApp antes da
+finalização do pedido."
 
-Nossa História usa "Uma história feita de cuidado." e os quatro parágrafos
-aprovados sobre a pandemia, Manoel e Margarete e o trabalho artesanal.
-O texto identifica a empresa como "A marca Manu Saboaria" e mantém o Manu
-no masculino. A fotografia original da seção foi preservada.
+A galeria não é exibida. As 137 fotos permanecem em assets/galeria;
+galeria.html redireciona ao catálogo. Algumas fotos também atendem Hortifruti.
 
-Após os produtos, a frase é: "A disponibilidade dos produtos e fragrâncias,
-assim como o frete, será confirmada pelo WhatsApp ao enviar o pedido."
-A galeria não é mais exibida. As 137 fotos permanecem em assets/galeria;
-galeria.html redireciona ao catálogo. Preserve esses arquivos.
+NOSSA HISTÓRIA E CARROSSEL — 25/10/2026
 
-CARROSSEL DE NOSSA HISTÓRIA — 18/10/2026
+Nossa História usa "Feita à mão, com cuidado em cada detalhe." e os quatro
+parágrafos revisados após "Alterar para" na página 6 de Ajustes 2.pdf:
+origem na pandemia, ampliação da linha, cuidado artesanal e participação nas
+feiras. A versão anterior sobre a família foi substituída. O texto identifica
+a empresa como "A marca Manu Saboaria" e mantém o Manu no masculino.
+A seção mantém texto mais amplo, sem Acompanhe e sem a assinatura antiga.
 
-A seção tem texto mais amplo, sem o link Acompanhe e sem a assinatura antiga.
-O carrossel reúne 14 fotos: manu-na-feira.png primeiro, preservado também em
-Onde encontrar, e as 13 imagens originais do ZIP em assets/images/nossa-historia.
-Os nomes vão de foto-01.jpg a foto-13.jpg, com foto-09.png no formato original.
-Preserve os bytes e os rostos das fotos, sem retoques ou geração de imagens.
-A troca automática ocorre a cada seis segundos, com pausa e botões anterior
-e próxima. O comportamento fica em assets/js/historia-carousel.js e o estilo
-em assets/css/historia.css. Os quatro parágrafos aprovados foram mantidos.
+O carrossel reúne 13 fotos originais do ZIP, com o casal em foto-03.jpg primeiro.
+Todas estão em assets/images/nossa-historia: foto-01.jpg a foto-13.jpg,
+com foto-09.png no formato original. Preserve os bytes e os rostos, sem retoques
+ou geração de imagens. manu-na-feira.png saiu apenas do carrossel e continua
+preservada e na página Onde Encontrar.
+A troca automática ocorre a cada seis segundos, com pausa e controles anterior,
+próxima e teclado. Manutenção em assets/js/historia-carousel.js e
+assets/css/historia.css.
+
+AJUSTES 2 — ESTADO ATUAL EM 25/10/2026
+
+Os dois projetos existentes agora ficam em C:\manu:
+C:\manu\Manu Saboaria\site — site completo e manutenção principal.
+C:\manu\Manu Saboaria - GitHub\SITE-COMPLETO — cópia para publicação.
+Os caminhos antigos da Área de Trabalho foram substituídos. Mantenha arquivos
+históricos fora do site publicado e não crie novas cópias independentes.
+
+Menu confirmado da página 1: Início, Produtos, Coleções Especiais,
+Nossa História, Onde Encontrar e Últimas Notícias. Fale conosco permanece
+como botão separado; a busca continua no cabeçalho e no menu do celular.
+O rodapé usa Navegue. Há um atalho flutuante do WhatsApp no canto inferior direito.
+
+O banner mantém a foto real e usa "para você, sua casa e para presentear",
+sem ponto final, e "Conheça os nossos produtos". Os títulos ficam sem itálico.
+A seção dos três cartões usa "Cuidado para cada momento." e
+"Descubra criações artesanais para transformar pequenos momentos da rotina
+em experiências especiais.". A arte original do DOCX foi preservada.
+
+O antigo bloco Seu tempo. Seu ritual. deu lugar a Últimas Notícias,
+em index.html#noticias, com as quatro fontes fornecidas no PDF:
+Prefeitura de Curitiba, RPC, Assembleia Legislativa do Paraná e RIC TV.
+As imagens extraídas ficam em assets/images/noticias; textos e links ficam
+no HTML. O mockup de notícias não autoriza criar outras reportagens.
+A home e Fale conosco mostram as mesmas oito dúvidas frequentes revisadas,
+incluindo escolha do sabonete e composição dos ingredientes.
+A chamada final da home leva a Onde Encontrar.
+
+O acabamento comum fica em assets/css/ajustes2.css. Os carrosséis manuais de
+notícias e Hortifruti usam assets/js/cards-carousel.js. Hortifruti permanece
+com quatro consultas sem preços novos; Primavera continua recolhível abaixo.
+Onde Encontrar usa os textos revisados, sem os blocos removidos, preservando
+agenda e horários confirmados. O Empório é identificado com box 304.
+O PDF de referência, arquivos de análise, credenciais, publicador e editor
+privado não fazem parte do site publicado.
 
 COMO NOS ENCONTRAR — AGENDA
 

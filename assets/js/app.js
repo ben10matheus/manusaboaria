@@ -29,22 +29,22 @@
     const catalogGroups = {
       voce: {
         eyebrow: 'PARA VOCÊ',
-        title: 'Seu momento de pausa e bem-estar.',
+        title: 'Momento de cuidado e bem-estar.',
         intro: '',
         types: [
-          { id: 'body-splash', label: 'Body Splash', ids: [] },
-          { id: 'creme-hidratante', label: 'Creme Hidratante', ids: ['creme-maos'] },
-          { id: 'escalda-pes', label: 'Escalda Pés', ids: ['escalda-grande', 'escalda-pequeno'] },
-          { id: 'espuma-de-banho', label: 'Espuma de Banho', ids: ['espuma'] },
-          { id: 'geleia-de-banho', label: 'Geleia de Banho', ids: ['geleia'] },
-          { id: 'locao-pos-barba', label: 'Loção Pós Barba', ids: [] },
           { id: 'sabonetes', label: 'Sabonetes', ids: ['liquido'], category: 'sabonetes' },
-          { id: 'sais-de-banho', label: 'Sais de Banho', ids: ['sais'] }
+          { id: 'body-splash', label: 'Body Splash', ids: [] },
+          { id: 'geleia-de-banho', label: 'Geleia de Banho', ids: ['geleia'] },
+          { id: 'sais-de-banho', label: 'Sais de Banho', ids: ['sais'] },
+          { id: 'espuma-de-banho', label: 'Espuma de Banho', ids: ['espuma'] },
+          { id: 'escalda-pes', label: 'Escalda Pés', ids: ['escalda-grande', 'escalda-pequeno'] },
+          { id: 'creme-hidratante', label: 'Creme Hidratante', ids: ['creme-maos'] },
+          { id: 'locao-pos-barba', label: 'Loção Pós Barba', ids: [] }
         ]
       },
       casa: {
-        eyebrow: 'PARA A CASA',
-        title: 'Aroma que dá vida ao lar.',
+        eyebrow: 'PARA CASA',
+        title: 'Aromas que acolhem e transformam ambientes.',
         intro: '',
         types: [
           { id: 'velas', label: 'Velas', ids: ['vela-vidro', 'capivela', 'vela-latinha', 'vela-decorada'] },
@@ -55,13 +55,13 @@
       },
       presentes: {
         eyebrow: 'PARA PRESENTEAR',
-        title: 'Surpreenda com algo especial.',
-        intro: 'Encontre o presente ideal para cada ocasião. Se quiser, personalize pelo WhatsApp, combinando produtos de acordo com suas preferências.',
+        title: 'Surpreenda com um toque especial.',
+        intro: 'Encontre opções para diferentes ocasiões e personalize sua composição pelo WhatsApp, combinando produtos de acordo com suas preferências.',
         types: [
-          { id: 'ate-3990', label: 'Até R$ 39,90', max: 39.9 },
-          { id: 'ate-6990', label: 'Até R$ 69,90', max: 69.9 },
-          { id: 'ate-9990', label: 'Até R$ 99,90', max: 99.9 },
-          { id: 'a-partir-9990', label: 'A partir de R$ 99,90', min: 99.9 }
+          { id: 'ate-3990', label: 'Até R$ 39,90', maxCents: 3990 },
+          { id: 'de-3991-a-6990', label: 'De R$ 39,91 a R$ 69,90', minCents: 3991, maxCents: 6990 },
+          { id: 'de-6991-a-9990', label: 'De R$ 69,91 a R$ 99,90', minCents: 6991, maxCents: 9990 },
+          { id: 'acima-9990', label: 'Acima de R$ 99,90', minCents: 9991 }
         ]
       }
     };
@@ -259,8 +259,10 @@
       const type = settings.types.find(item => item.id === state.type);
       if (!type) return true;
       if (state.filter === 'presentes') {
-        return isPriced(product) && (type.min === undefined || product.price >= type.min)
-          && (type.max === undefined || product.price <= type.max);
+        if (!isPriced(product)) return false;
+        const cents = Math.round(product.price * 100);
+        return (type.minCents === undefined || cents >= type.minCents)
+          && (type.maxCents === undefined || cents <= type.maxCents);
       }
       return type.ids.includes(product.id) || (type.category && product.category === type.category);
     }

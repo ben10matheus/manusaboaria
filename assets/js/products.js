@@ -9,7 +9,7 @@ window.MANU = {
       "categoryLabel": "Sabonetes artesanais",
       "price": 15,
       "image": "assets/images/sabonete-aveia.webp",
-      "description": "Sabonete artesanal em barra.",
+      "description": "Um cuidado simples para acompanhar o banho e deixar a rotina mais especial. A foto apresenta duas barras, mas o valor é por unidade.",
       "detail": "Sabonete artesanal em barra de aveia. Um cuidado simples para acompanhar o seu banho e deixar a rotina mais especial. Valor por unidade; a foto apresenta duas barras.",
       "size": "1 unidade"
     },
@@ -20,7 +20,7 @@ window.MANU = {
       "categoryLabel": "Aromas para casa",
       "price": 89,
       "image": "assets/images/difusor-mangaja.webp",
-      "description": "Difusor com varetas. · 200 ml",
+      "description": "Fragrância para perfumar os ambientes. Conteúdo: 200 ml.",
       "detail": "Perfume o seu cantinho com o difusor do Manu. Acompanha varetas. A foto apresenta a versão Mangajá; converse com o Manu sobre outras fragrâncias disponíveis.",
       "size": "200 ml · com varetas"
     },
@@ -31,7 +31,7 @@ window.MANU = {
       "categoryLabel": "Velas aromáticas",
       "price": 69,
       "image": "assets/images/vela-vidro.webp",
-      "description": "Vela aromática em vidro.",
+      "description": "Uma opção para criar uma atmosfera acolhedora em casa.",
       "detail": "Vela aromática grande em vidro. Uma companhia para um momento tranquilo em casa. Foto da fragrância Laranja e Cravo. Valor por unidade; consulte os aromas disponíveis.",
       "size": "1 unidade · vidro grande"
     },
@@ -42,7 +42,7 @@ window.MANU = {
       "categoryLabel": "Aromas para casa",
       "price": 25,
       "image": "assets/images/agua-perfumada-100.webp",
-      "description": "Água perfumada em frasco de 100 ml.",
+      "description": "Perfume delicado para renovar o aroma dos ambientes.",
       "detail": "Água perfumada em frasco de 100 ml. A foto mostra algumas fragrâncias da coleção. Escolha o seu aroma no atendimento e siga as orientações do rótulo para aplicação.",
       "size": "100 ml · 1 unidade"
     },

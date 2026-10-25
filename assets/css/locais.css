@@ -101,3 +101,8 @@
 .locations-welcome-photo-manu>img{width:100%;height:auto;aspect-ratio:800/533;object-fit:contain;object-position:center}
 
 .locations-schedule-note a{text-decoration:underline;text-underline-offset:3px;color:#333}
+
+/* Os textos de apoio ficam abaixo dos titulos de agenda e pontos de venda. */
+.locations-section-heading-stacked{display:block}
+.locations-section-description{font-family:var(--display);font-size:15px;line-height:1.7;color:#555;max-width:720px;margin-top:18px}
+@media(max-width:700px){.locations-section-description{font-size:14px;margin-top:16px}}

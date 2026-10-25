@@ -1,0 +1,35 @@
+/* Ajustes aprovados em outubro: navegação, notícias e pontos de contato. */
+:is(h1,h2,h3) em{font-style:normal!important}
+.whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:35;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:#287f82;color:#fff;border:1px solid rgba(255,255,255,.75);box-shadow:0 5px 20px #0002;transition:transform .2s,background .2s}
+.whatsapp-float:hover{background:#18a7ad;transform:translateY(-2px)}
+.whatsapp-float svg{width:29px;height:29px;stroke-width:1.6}
+body:has(dialog[open]) .whatsapp-float{visibility:hidden}
+.footer{padding-bottom:65px}
+.footer-top{grid-template-columns:1.35fr 1fr 1.1fr;gap:50px}
+.news-section{background:linear-gradient(120deg,#f7fbfa,#fff9fa);border-block:1px solid #d1ebe760}
+.news-section .section-heading{display:block;margin-bottom:32px}
+.news-section .section-heading p:not(.eyebrow){max-width:720px;font-family:var(--display);font-size:17px;line-height:1.7;color:#555;margin-top:18px}
+.cards-track{display:grid;grid-auto-flow:column;grid-auto-columns:calc((100% - 40px)/3);gap:20px;overflow-x:auto;overscroll-behavior-inline:contain;scroll-snap-type:x mandatory;scroll-padding-inline:1px;padding:3px 1px 12px;scrollbar-width:thin;scrollbar-color:#a8d9d6 transparent}
+.cards-track>article{scroll-snap-align:start;min-width:0}
+.news-card{background:#fff;border:1px solid #d1ebe7;border-radius:20px;overflow:hidden;display:flex;flex-direction:column}
+.news-cover{aspect-ratio:16/10;background:#f3e9de;overflow:hidden}
+.news-cover img{width:100%;height:100%;object-fit:cover;object-position:center 35%}
+.news-card-copy{padding:22px;display:flex;flex-direction:column;align-items:flex-start;flex:1}
+.news-meta{font-size:10px;line-height:1.65;color:#666;display:flex;flex-direction:column;gap:3px;margin-bottom:13px}
+.news-meta span{color:#287f82;font-weight:700}
+.news-card h3{font-family:var(--serif);font-size:26px;line-height:1.2;letter-spacing:-.4px;margin-bottom:15px}
+.news-card-copy>p:not(.news-meta){font-size:12px;line-height:1.8;color:#555;margin-bottom:23px}
+.news-card-copy .text-link{font-size:11px;margin-top:auto;gap:8px}
+.cards-controls{display:flex;justify-content:flex-end;gap:9px;margin-top:18px}
+.cards-controls button{display:grid;place-items:center;width:44px;height:44px;border:1px solid #acd9d7;background:#fff;border-radius:50%}
+.cards-controls button:hover{background:#eaf5f3}
+.cards-controls button:disabled{opacity:.35;cursor:default}
+.cards-controls svg{width:18px;height:18px}
+.home .visit-banner>.container{display:flex;align-items:center;justify-content:space-between;gap:40px}
+.visit-banner h2{max-width:740px}
+.visit-description{max-width:640px;font-size:14px;line-height:1.8;color:#555;margin-top:22px}
+.visit-banner .button{flex-shrink:0}
+.cozy-header .desktop-nav{gap:14px}
+@media(max-width:1050px){.cards-track{grid-auto-columns:calc((100% - 20px)/2)}.footer-top{gap:32px}}
+@media(max-width:740px){.cards-track{grid-auto-columns:82%;gap:16px}.news-card h3{font-size:25px}.news-card-copy{padding:20px}.news-section .section-heading p:not(.eyebrow){font-size:15px}.home .visit-banner>.container{display:block}.home .visit-banner .button{margin-top:27px;width:100%}.footer-top{grid-template-columns:1fr 1fr;gap:30px}.footer-top>div:first-child{grid-column:1/-1}.whatsapp-float{right:17px;bottom:17px;width:51px;height:51px}}
+@media(prefers-reduced-motion:reduce){.whatsapp-float{transition:none}}

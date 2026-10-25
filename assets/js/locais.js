@@ -41,6 +41,12 @@
     const data = window.MANU_LOCAIS || {};
     const fixed = Array.isArray(data.fixos) ? data.fixos.filter(item => item && typeof item === 'object') : [];
     const fairs = Array.isArray(data.feiras) ? data.feiras : [];
+    // Textos de apresentacao independentes dos enderecos e horarios da agenda.
+    const fixedDescriptions = new Map([
+      ['feira-do-botanico', 'Visite nossa banca na Feira do Jardim Botânico e conheça as criações artesanais da marca Manu Saboaria.'],
+      ['largo-da-ordem', 'Visite nossa banca na Feira do Largo da Ordem e descubra suas fragrâncias favoritas no coração do Centro Histórico.'],
+      ['mercado-municipal', 'Encontre as criações da marca Manu Saboaria no Empório, box 304, dentro do Mercado Municipal de Curitiba.']
+    ]);
     const $ = id => document.getElementById(id);
     let renderedDay = null;
     let dayTimer;
@@ -84,13 +90,14 @@
     function placeCard(item, options = {}) {
       const card = element('article', 'place-card' + (options.fixed ? ' place-card-fixed' : ' place-card-fair'));
       const top = element('div', 'place-card-top');
-      top.append(element('p', 'place-card-kind', options.fixed ? 'PONTO FIXO ' + String(options.number).padStart(2, '0') : 'FEIRA & ENCONTRO'));
+      if (!options.fixed) top.append(element('p', 'place-card-kind', 'FEIRA & ENCONTRO'));
       if (options.fixed && text(item.frequencia)) top.append(element('p', 'place-frequency', text(item.frequencia)));
       if (!options.fixed) {
         const label = options.status === 'current' ? 'Acontecendo hoje' : options.status === 'past' ? 'Encerrada' : 'Agendada';
         top.append(element('p', 'place-status place-status-' + options.status, label));
       }
-      card.append(top, element('h3', '', text(item.nome) || (options.fixed ? 'Ponto de encontro' : 'Encontro especial')));
+      if (top.childElementCount) card.append(top);
+      card.append(element('h3', '', text(item.nome) || (options.fixed ? 'Ponto de venda' : 'Encontro especial')));
       if (!options.fixed) {
         const dates = item.inicio === item.fim ? dateLabel(item.inicio) : dateLabel(item.inicio) + ' a ' + dateLabel(item.fim);
         card.append(element('p', 'place-dates', dates));
@@ -100,7 +107,8 @@
       if (text(item.endereco)) details.append(detail('ENDEREÇO', text(item.endereco)));
       details.append(detail('HORÁRIOS', text(item.horarios) || 'Confirme os horários com o Manu.'));
       card.append(details);
-      if (text(item.observacao)) card.append(element('p', 'place-note', text(item.observacao)));
+      const observation = (options.fixed && fixedDescriptions.get(text(item.id))) || text(item.observacao);
+      if (observation) card.append(element('p', 'place-note', observation));
       const links = element('div', 'place-card-links');
       const mapQuery = text(item.mapa) || text(item.endereco);
       if (mapQuery) {
@@ -118,7 +126,7 @@
       const target = $('locations-fixed');
       if (!target) return;
       const fragment = document.createDocumentFragment();
-      fixed.forEach((item, index) => fragment.append(placeCard(item, { fixed: true, number: index + 1 })));
+      fixed.forEach(item => fragment.append(placeCard(item, { fixed: true })));
       target.replaceChildren(fragment);
       if ($('locations-fixed-empty')) $('locations-fixed-empty').hidden = fixed.length > 0;
     }
@@ -145,7 +153,6 @@
         history.hidden = past.length === 0;
         if (!past.length) history.open = false;
       }
-      if ($('locations-history-count')) $('locations-history-count').textContent = '(' + past.length + ')';
       if ($('locations-past')) {
         const fragment = document.createDocumentFragment();
         past.forEach(entry => fragment.append(placeCard(entry.item, { status: entry.status })));
