@@ -1,6 +1,7 @@
 /* Ajustes aprovados em outubro: navegação, notícias e pontos de contato. */
 :is(h1,h2,h3) em{font-style:normal!important}
-.whatsapp-float{position:fixed;right:22px;bottom:22px;z-index:35;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:#287f82;color:#fff;border:1px solid rgba(255,255,255,.75);box-shadow:0 5px 20px #0002;transition:transform .2s,background .2s}
+/* Mantém o botão acima do selo do Netlify, incluindo a área segura do celular. */
+.whatsapp-float{position:fixed;right:22px;bottom:calc(80px + env(safe-area-inset-bottom, 0px));z-index:35;display:grid;place-items:center;width:54px;height:54px;border-radius:50%;background:#287f82;color:#fff;border:1px solid rgba(255,255,255,.75);box-shadow:0 5px 20px #0002;transition:transform .2s,background .2s}
 .whatsapp-float:hover{background:#18a7ad;transform:translateY(-2px)}
 .whatsapp-float svg{width:29px;height:29px;stroke-width:1.6}
 body:has(dialog[open]) .whatsapp-float{visibility:hidden}
@@ -31,5 +32,5 @@ body:has(dialog[open]) .whatsapp-float{visibility:hidden}
 .visit-banner .button{flex-shrink:0}
 .cozy-header .desktop-nav{gap:14px}
 @media(max-width:1050px){.cards-track{grid-auto-columns:calc((100% - 20px)/2)}.footer-top{gap:32px}}
-@media(max-width:740px){.cards-track{grid-auto-columns:82%;gap:16px}.news-card h3{font-size:25px}.news-card-copy{padding:20px}.news-section .section-heading p:not(.eyebrow){font-size:15px}.home .visit-banner>.container{display:block}.home .visit-banner .button{margin-top:27px;width:100%}.footer-top{grid-template-columns:1fr 1fr;gap:30px}.footer-top>div:first-child{grid-column:1/-1}.whatsapp-float{right:17px;bottom:17px;width:51px;height:51px}}
+@media(max-width:740px){.cards-track{grid-auto-columns:82%;gap:16px}.news-card h3{font-size:25px}.news-card-copy{padding:20px}.news-section .section-heading p:not(.eyebrow){font-size:15px}.home .visit-banner>.container{display:block}.home .visit-banner .button{margin-top:27px;width:100%}.footer-top{grid-template-columns:1fr 1fr;gap:30px}.footer-top>div:first-child{grid-column:1/-1}.whatsapp-float{right:17px;width:51px;height:51px}}
 @media(prefers-reduced-motion:reduce){.whatsapp-float{transition:none}}
