@@ -34,3 +34,6 @@ body:has(dialog[open]) .whatsapp-float{visibility:hidden}
 @media(max-width:1050px){.cards-track{grid-auto-columns:calc((100% - 20px)/2)}.footer-top{gap:32px}}
 @media(max-width:740px){.cards-track{grid-auto-columns:82%;gap:16px}.news-card h3{font-size:25px}.news-card-copy{padding:20px}.news-section .section-heading p:not(.eyebrow){font-size:15px}.home .visit-banner>.container{display:block}.home .visit-banner .button{margin-top:27px;width:100%}.footer-top{grid-template-columns:1fr 1fr;gap:30px}.footer-top>div:first-child{grid-column:1/-1}.whatsapp-float{right:17px;width:51px;height:51px}}
 @media(prefers-reduced-motion:reduce){.whatsapp-float{transition:none}}
+/* Sacola vazia aprovada nos Ajustes 3. */
+.cart-empty-illustration{display:block;width:66px;height:66px;margin:0 auto 24px;fill:none;stroke:#18a7ad;stroke-width:2.6;stroke-linecap:round;stroke-linejoin:round}
+.cart-empty .button-primary{color:#fff}

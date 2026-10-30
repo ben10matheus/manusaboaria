@@ -4,7 +4,9 @@ A edição atual é Tempo de Flores / Primavera Curitibana.
 As nove fotos ficam em assets/eventos-especiais/primavera-2026/.
 
 capa.jpg: composição principal da coleção.
-especial1.jpg a especial8.jpg: oito fotos exibidas na galeria.
+A galeria e o lightbox mostram somente especial1.jpg, especial3.jpg,
+especial6.jpg e especial8.jpg. As outras fotos permanecem preservadas.
+A capa é estática e fica fora da navegação do lightbox.
 
 PARA TROCAR UMA FOTO
 
@@ -17,7 +19,8 @@ PARA UMA NOVA EDIÇÃO
 
 Crie uma nova subpasta em assets/eventos-especiais/ e ajuste basePath
 no config.js. Cada item de images tem file (nome do arquivo), title
-(legenda) e alt (descrição acessível). A capa é o primeiro item.
+(legenda) e alt (descrição acessível). Liste somente as fotos navegáveis.
+A imagem da capa é configurada diretamente no HTML, fora de images.
 Atualize também os textos e os caminhos de fallback/preload do HTML,
 para que a página já apresente a nova edição antes do JavaScript carregar.
 

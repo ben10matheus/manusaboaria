@@ -25,7 +25,7 @@ DATAS E VISIBILIDADE
 
 Cada feira tem data de início e de fim, incluindo o último dia.
 Antes do início ela aparece como próxima; durante o período, em andamento;
-depois do fim, fica apenas no histórico recolhido da página.
+depois do fim, deixa de aparecer no site e permanece no arquivo de dados.
 A referência é o dia em Curitiba (America/Sao_Paulo).
 Desmarcar Publicar retira a feira de todas as listas públicas.
 O site não consulta editais automaticamente. Cadastre os novos eventos

@@ -41,12 +41,6 @@
     const data = window.MANU_LOCAIS || {};
     const fixed = Array.isArray(data.fixos) ? data.fixos.filter(item => item && typeof item === 'object') : [];
     const fairs = Array.isArray(data.feiras) ? data.feiras : [];
-    // Textos de apresentacao independentes dos enderecos e horarios da agenda.
-    const fixedDescriptions = new Map([
-      ['feira-do-botanico', 'Visite nossa banca na Feira do Jardim Botânico e conheça as criações artesanais da marca Manu Saboaria.'],
-      ['largo-da-ordem', 'Visite nossa banca na Feira do Largo da Ordem e descubra suas fragrâncias favoritas no coração do Centro Histórico.'],
-      ['mercado-municipal', 'Encontre as criações da marca Manu Saboaria no Empório, box 304, dentro do Mercado Municipal de Curitiba.']
-    ]);
     const $ = id => document.getElementById(id);
     let renderedDay = null;
     let dayTimer;
@@ -93,7 +87,7 @@
       if (!options.fixed) top.append(element('p', 'place-card-kind', 'FEIRA & ENCONTRO'));
       if (options.fixed && text(item.frequencia)) top.append(element('p', 'place-frequency', text(item.frequencia)));
       if (!options.fixed) {
-        const label = options.status === 'current' ? 'Acontecendo hoje' : options.status === 'past' ? 'Encerrada' : 'Agendada';
+        const label = options.status === 'current' ? 'Acontecendo hoje' : 'Agendada';
         top.append(element('p', 'place-status place-status-' + options.status, label));
       }
       if (top.childElementCount) card.append(top);
@@ -107,12 +101,13 @@
       if (text(item.endereco)) details.append(detail('ENDEREÇO', text(item.endereco)));
       details.append(detail('HORÁRIOS', text(item.horarios) || 'Confirme os horários com o Manu.'));
       card.append(details);
-      const observation = (options.fixed && fixedDescriptions.get(text(item.id))) || text(item.observacao);
+      const observation = text(item.observacao);
       if (observation) card.append(element('p', 'place-note', observation));
       const links = element('div', 'place-card-links');
       const mapQuery = text(item.mapa) || text(item.endereco);
       if (mapQuery) {
-        const map = externalLink('place-map', 'Ver no mapa ↗', 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(mapQuery));
+        const mapHref = sourceURL(mapQuery) || 'https://www.google.com/maps/search/?api=1&query=' + encodeURIComponent(mapQuery);
+        const map = externalLink('place-map', 'Ver no mapa ↗', mapHref);
         map.setAttribute('aria-label', 'Ver ' + (text(item.nome) || 'o endereço') + ' no Google Maps, em uma nova aba');
         links.append(map);
       }
@@ -140,7 +135,6 @@
         const priority = Number(a.status !== 'current') - Number(b.status !== 'current');
         return priority || a.item.inicio.localeCompare(b.item.inicio) || a.item.fim.localeCompare(b.item.fim) || text(a.item.nome).localeCompare(text(b.item.nome), 'pt-BR');
       });
-      const past = classified.filter(entry => entry.status === 'past').sort((a, b) => b.item.fim.localeCompare(a.item.fim) || b.item.inicio.localeCompare(a.item.inicio));
       const target = $('locations-current');
       if (target) {
         const fragment = document.createDocumentFragment();
@@ -148,16 +142,6 @@
         target.replaceChildren(fragment);
       }
       if ($('locations-empty')) $('locations-empty').hidden = current.length > 0;
-      const history = $('locations-history');
-      if (history) {
-        history.hidden = past.length === 0;
-        if (!past.length) history.open = false;
-      }
-      if ($('locations-past')) {
-        const fragment = document.createDocumentFragment();
-        past.forEach(entry => fragment.append(placeCard(entry.item, { status: entry.status })));
-        $('locations-past').replaceChildren(fragment);
-      }
     }
 
     function scheduleDayCheck() {

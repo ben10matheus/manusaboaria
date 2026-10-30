@@ -1,5 +1,5 @@
 MANU SABOARIA — SITE PRONTO PARA PUBLICAR
-Preparado em 15/10/2026. Atualizado em 25/10/2026 conforme Ajustes 2.pdf.
+Preparado em 15/10/2026. Atualizado em 30/10/2026 conforme Ajustes 3.pdf.
 
 Esta pasta contém o site completo: 26 itens de catálogo, fotos de destaque,
 137 fotos preservadas da antiga galeria, sacola e pedidos pelo WhatsApp.
@@ -147,18 +147,22 @@ presentear exibem Valor sob consulta e consultam o Manu pelo WhatsApp.
 As fotos mostram composições. Não foram criados preços ou SKUs no catálogo.
 A estrutura fica no HTML e o acabamento em assets/css/colecoes.css.
 
-Tempo de Flores — Edição de Primavera permanece numa seção recolhível abaixo,
-com as nove fotos de assets/eventos-especiais/primavera-2026:
-capa.jpg e especial1.jpg até especial8.jpg. O lightbox foi mantido.
-assets/eventos-especiais/config.js e assets/js/eventos.js configuram somente
-Primavera. As cinco fotos anteriores também foram preservadas.
+Tempo de Flores — Edição de Primavera permanece numa seção recolhível abaixo.
+A capa é estática; a galeria/lightbox mostra somente especial1.jpg, especial3.jpg,
+especial6.jpg e especial8.jpg, com os títulos Sabonete Artesanal, Vela Artesanal,
+Difusor de Ambiente e Água Perfumada. Os nove originais continuam preservados
+em assets/eventos-especiais/primavera-2026, além das cinco fotos anteriores.
+config.js e eventos.js configuram só as quatro fotos navegáveis de Primavera.
+O contato fica centralizado após a nota da galeria; não há CTA no banner.
 
 FALE CONOSCO
-A página fale-conosco.html reúne WhatsApp, Instagram e as oito dúvidas
-frequentes revisadas. O menu atual segue a página 1 de Ajustes 2.pdf:
-Início, Produtos, Coleções Especiais, Nossa História, Onde Encontrar e
-Últimas Notícias. Fale conosco fica separado e também aparece no menu móvel.
-O grupo Para Presentear continua pelos cartões e filtros do catálogo.
+Fale conosco abre o WhatsApp diretamente no cabeçalho, menu móvel e rodapé.
+fale-conosco.html permanece só como redirecionamento legado, sem interface
+de contato. As oito dúvidas frequentes revisadas continuam na home.
+O Instagram da marca aparece no rodapé abaixo do WhatsApp. O texto
+Feito para sentir foi retirado; copyright e privacidade permanecem.
+O menu mantém Início, Produtos, Coleções Especiais, Nossa História,
+Onde Encontrar e Últimas Notícias. Para Presentear segue pelos cartões/filtros.
 A galeria não aparece na interface nem nos rodapés; galeria.html redireciona
 ao catálogo. O bloco promocional antigo permanece retirado.
 
@@ -201,7 +205,8 @@ index.html no computador sem depender de arquivos de outra pasta.
 11. AJUSTES DO DOCUMENTO AJUSTES 1
 
 A arte e os componentes desta referência foram preservados; os textos e a
-ordem atual do menu seguem a revisão de 25/10/2026 (Ajustes 2.pdf).
+ordem do menu seguem a definição de 25/10/2026, com os ajustes posteriores
+de 30/10/2026 (Ajustes 3.pdf).
 O acabamento do cabeçalho, da busca e das setas fica em assets/css/ajustes.css.
 
 A busca do cabeçalho funciona pelo botão da lupa ou pela tecla Enter.
@@ -306,7 +311,8 @@ A troca automática ocorre a cada seis segundos, com pausa e controles anterior,
 próxima e teclado. Manutenção em assets/js/historia-carousel.js e
 assets/css/historia.css.
 
-AJUSTES 2 — ESTADO ATUAL EM 25/10/2026
+AJUSTES 2 — REGISTRO DE 25/10/2026
+Os pontos alterados depois desta revisão são substituídos pelo bloco Ajustes 3.
 
 Os dois projetos existentes agora ficam em C:\manu:
 C:\manu\Manu Saboaria\site — site completo e manutenção principal.
@@ -330,8 +336,9 @@ em index.html#noticias, com as quatro fontes fornecidas no PDF:
 Prefeitura de Curitiba, RPC, Assembleia Legislativa do Paraná e RIC TV.
 As imagens extraídas ficam em assets/images/noticias; textos e links ficam
 no HTML. O mockup de notícias não autoriza criar outras reportagens.
-A home e Fale conosco mostram as mesmas oito dúvidas frequentes revisadas,
-incluindo escolha do sabonete e composição dos ingredientes.
+Na revisão de 25/10, a home e a antiga página de contato receberam oito
+dúvidas frequentes. Ajustes 3 substituiu a página de contato por redirecionamento;
+as oito FAQs, incluindo escolha do sabonete e ingredientes, continuam na home.
 A chamada final da home leva a Onde Encontrar.
 
 O acabamento comum fica em assets/css/ajustes2.css. Os carrosséis manuais de
@@ -341,6 +348,42 @@ Onde Encontrar usa os textos revisados, sem os blocos removidos, preservando
 agenda e horários confirmados. O Empório é identificado com box 304.
 O PDF de referência, arquivos de análise, credenciais, publicador e editor
 privado não fazem parte do site publicado.
+
+AJUSTES 3 — ESTADO ATUAL EM 30/10/2026
+
+Esta revisão substitui os pontos correspondentes das notas históricas acima.
+A fotografia do banner e as formas inferiores foram preservadas; a decoração
+superior marcada no PDF foi removida. No catálogo, saíram apenas os rótulos
+repetidos acima dos títulos dos três grupos; os filtros continuam visíveis.
+
+A sacola vazia mantém SEUS PRODUTOS / Sua sacola. e usa uma ilustração mínima
+de sacola, "Que tal escolher algo especial?", "Escolha seus produtos e monte
+seu pedido." e "Ver produtos" com texto claro. A navegação volta ao catálogo.
+A chamada final da home usa "QUER ENCONTRAR MANU SABOARIA?" e "Consulte os
+pontos de venda, confira os horários das feiras e descubra onde nós estamos.".
+
+Fale conosco leva direto ao WhatsApp nos menus e rodapés. O endereço antigo
+fale-conosco.html é só redirecionamento; as oito FAQs permanecem na home.
+Instagram fica abaixo do WhatsApp no rodapé. Feito para sentir foi retirado.
+
+Hortifruti perdeu somente o CTA Conheça os sabonetes do banner. Os quatro
+cards sob consulta e a chamada final foram preservados. Primavera mantém
+capa estática e quatro imagens na galeria/lightbox: especial1, especial3,
+especial6 e especial8. Todos os nove arquivos originais foram preservados.
+Saíram o botão e a nota do banner, a faixa verde, a introdução visual da galeria
+e o antigo banner de conversa. Quero conhecer Tempo de Flores aparece uma vez,
+centralizado depois da nota Fotos da edição Tempo de Flores.
+
+Onde Encontrar usa "Consulte a agenda, veja onde estaremos e escolha o melhor
+dia para nos visitar.". Não há histórico de feiras na interface; os registros
+continuam em assets/agenda/agenda.js. O aviso sobre clima e Stories fica abaixo
+dos pontos fixos. Preserve no campo mapa da Feira do Carmo o link completo do
+Google Maps fornecido no PDF, sem substituir por uma busca genérica.
+Botânico informa a rua perto do portão principal. Largo informa que a posição
+pode variar e pede consultar os Stories no dia. O Empório usa Terça a domingo
+e "Encontre as criações da marca Manu Saboaria na loja do Empório, box 304,
+dentro do Mercado.". Endereços, horários e a foto original foram preservados.
+O editor de feiras, os PDFs e as fichas de produtos continuam fora da publicação.
 
 COMO NOS ENCONTRAR — AGENDA
 
@@ -352,6 +395,7 @@ na pasta principal Manu Saboaria, FORA da pasta site. O editor não faz
 parte dos arquivos publicados e não deve ser enviado ao GitHub.
 Carregue assets/agenda/agenda.js, altere os campos e salve esse arquivo.
 No GitHub, substitua somente assets/agenda/agenda.js para mudar a agenda.
-O editor não publica sozinho. Feiras encerradas saem automaticamente
-da lista atual e ficam no histórico recolhido, pelo dia em Curitiba.
+O editor não publica sozinho. Pelo dia em Curitiba, feiras encerradas deixam
+a lista atual, mas seus dados são preservados em agenda.js. Ajustes 3 retirou
+o histórico da interface pública, sem excluir esses registros.
 As instruções e as fontes estão em assets/agenda/COMO-ATUALIZAR.txt.

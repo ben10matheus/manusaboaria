@@ -59,9 +59,9 @@ A galeria foi retirada da interface e dos links públicos. O endereço antigo `g
 
 Em **Coleções Especiais**, **Hortifruti do Manu** é a coleção de abertura. Reutiliza fotos reais de `assets/galeria`: hero 026 e cards 032, 037, 038 e 080. Os quatro cards — Morango, Maracujá, Limão e Frutinhas para presentear — mostram **Valor sob consulta** e abrem consultas específicas no WhatsApp. As fotos mostram composições; não foram criados preços, kits com quantidade fixa ou novos registros no catálogo.
 
-**Tempo de Flores — Edição de Primavera** permanece abaixo, numa seção recolhível, com as nove fotos em `assets/eventos-especiais/primavera-2026/` e o lightbox. `config.js` e `eventos.js` continuam exclusivos dessa edição, sem alterar o Hortifruti. As cinco fotos anteriores também permanecem preservadas.
+**Tempo de Flores — Edição de Primavera** permanece abaixo, numa seção recolhível. A capa é estática e a galeria/lightbox mostra somente `especial1.jpg`, `especial3.jpg`, `especial6.jpg` e `especial8.jpg`, com os títulos Sabonete Artesanal, Vela Artesanal, Difusor de Ambiente e Água Perfumada. Os nove arquivos originais continuam em `assets/eventos-especiais/primavera-2026/`, e as cinco fotos anteriores também permanecem preservadas. `config.js` e `eventos.js` configuram apenas as quatro imagens navegáveis, sem alterar o Hortifruti ou a capa. O contato de Primavera fica centralizado após a nota da galeria; os antigos CTAs do banner e blocos introdutórios foram retirados.
 
-A página `fale-conosco.html` reúne WhatsApp, Instagram e as oito dúvidas frequentes abaixo dos canais.
+**Fale conosco** abre o WhatsApp diretamente. O endereço legado `fale-conosco.html` redireciona ao WhatsApp, sem uma página de atendimento. As oito dúvidas frequentes permanecem na home, e o Instagram aparece no rodapé logo abaixo do WhatsApp.
 
 Os pedidos são montados na sacola e enviados ao WhatsApp do Manu. A confirmação e os detalhes do pedido são combinados pelo atendimento.
 
@@ -105,11 +105,25 @@ A abertura mantém a fotografia real e usa o complemento “para você, sua casa
 
 O antigo bloco “Seu tempo. Seu ritual.” foi substituído por **Últimas Notícias**, em `index.html#noticias`, com quatro reportagens fornecidas no PDF: Prefeitura de Curitiba, RPC, Assembleia Legislativa do Paraná e RIC TV. As imagens extraídas ficam em `assets/images/noticias/`; os links e textos ficam no HTML. Não adicionar matérias ilustrativas do mockup como fontes reais.
 
-A home e Fale conosco apresentam as mesmas oito dúvidas frequentes revisadas, incluindo escolha do sabonete e composição dos ingredientes. O rodapé usa **Navegue**. O acabamento comum está em `assets/css/ajustes2.css`; notícias e Hortifruti compartilham os controles manuais de `assets/js/cards-carousel.js`.
+Na revisão de 25 de outubro, a home e a antiga página de contato receberam as mesmas oito dúvidas frequentes. Ajustes 3 substituiu a página de contato por um redirecionamento; as oito perguntas, incluindo escolha do sabonete e composição dos ingredientes, continuam na home. O rodapé usa **Navegue**. O acabamento comum está em `assets/css/ajustes2.css`; notícias e Hortifruti compartilham os controles manuais de `assets/js/cards-carousel.js`.
+
+## Ajustes 3 de 30 de outubro
+
+Esta revisão substitui os pontos correspondentes das notas anteriores. A fotografia e as formas inferiores do banner foram preservadas; a decoração superior marcada no PDF foi removida. Os três grupos do catálogo mantêm filtros e títulos, sem repetir Para Você, Para Casa e Para Presentear acima dos títulos.
+
+A sacola vazia usa uma ilustração de sacola, “Que tal escolher algo especial?”, “Escolha seus produtos e monte seu pedido.” e o botão “Ver produtos” com texto claro. O cabeçalho “SEUS PRODUTOS / Sua sacola.” permanece. A chamada final da home passa a “QUER ENCONTRAR MANU SABOARIA?” e usa “Consulte os pontos de venda, confira os horários das feiras e descubra onde nós estamos.”
+
+Fale conosco leva diretamente ao WhatsApp nos menus e rodapés. A interface da antiga página foi retirada, preservando seu endereço como redirecionamento. O rodapé mantém Instagram abaixo do WhatsApp e deixa de mostrar “Feito para sentir”. As oito FAQs da home continuam disponíveis.
+
+No Hortifruti, saiu somente o CTA “Conheça os sabonetes” do banner; os quatro cards sob consulta e a chamada final continuam. Na Primavera, a capa permanece estática e o lightbox navega pelas quatro fotos selecionadas. O banner perdeu botão e nota; a faixa verde, o cabeçalho visual da galeria e o banner de conversa foram retirados. Há um único “Quero conhecer Tempo de Flores”, centralizado abaixo da nota de disponibilidade. Nenhuma fotografia foi apagada.
+
+Onde Encontrar usa a introdução “Consulte a agenda, veja onde estaremos e escolha o melhor dia para nos visitar.” O histórico não aparece na interface; os registros continuam em `assets/agenda/agenda.js`. O aviso sobre clima e Stories fica abaixo dos pontos fixos. Preserve o URL completo do Google Maps da Feira do Carmo fornecido no PDF, no campo `mapa`, sem trocá-lo por uma busca genérica.
+
+Botânico informa “Na rua, nas proximidades do portão principal do Jardim Botânico.”; Largo informa que a localização pode variar e pede consultar os Stories no dia. O Empório usa **Terça a domingo** e “Encontre as criações da marca Manu Saboaria na loja do Empório, box 304, dentro do Mercado.” Endereços, horários e fotografias aprovados foram preservados.
 
 ## Como nos encontrar e agenda de feiras
 
-A página `como-nos-encontrar.html` mostra os locais fixos e as feiras temporárias, com links para o Google Maps. A agenda considera o dia em Curitiba: feiras futuras aparecem como próximas, as atuais ficam em andamento e as encerradas ficam no histórico recolhido.
+A página `como-nos-encontrar.html` mostra os locais fixos e as feiras temporárias, com links para o Google Maps. A agenda considera o dia em Curitiba: feiras futuras aparecem como próximas e as atuais ficam em andamento. Feiras encerradas permanecem no arquivo de dados, sem histórico visível na interface pública.
 
 O editor de feiras fica somente no computador do responsável, **fora deste pacote público**. O site não possui painel de edição nem rota para gravar dados. A agenda é publicada pelo responsável ao substituir `assets/agenda/agenda.js` na sua conta do GitHub.
 
